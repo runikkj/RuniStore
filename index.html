@@ -1,11 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <title>Runi Store BR</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+    header {
+      background-color: #8B0000;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      width: 80px;
+      vertical-align: middle;
+    }
+    header h1 {
+      display: inline;
+      margin-left: 15px;
+      font-size: 32px;
+    }
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .game {
+      background-color: #222;
+      border: 1px solid #444;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+    }
+    .game img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .game a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background-color: #8B0000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .game a:hover {
+      background-color: #a30000;
+    }
+  </style>
 </head>
 <body>
-  <h1>Bem-vindo à Runi Store BR!</h1>
-  <p>Loja oficial de jogos dublados e legendados para PS3.</p>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/en/9/9b/Diamond_Dogs_logo.svg" alt="Logo Runi Store">
+    <h1>Runi Store BR</h1>
+  </header>
+
+  <section class="games">
+    <div class="game">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Lego_Star_Wars_The_Complete_Saga.jpg/220px-Lego_Star_Wars_The_Complete_Saga.jpg" alt="LEGO Star Wars">
+      <h3>LEGO Star Wars (Dublado)</h3>
+      <a href="https://www.mediafire.com/file/0e4un08jjugxbif/Pedrost_LEGO_Star_Wars_01.pkg/file">Baixar</a>
+    </div>
+  </section>
 </body>
 </html>
