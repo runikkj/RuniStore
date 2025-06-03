@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <title>Runi Store BR</title>
@@ -23,6 +22,25 @@
       display: inline;
       margin-left: 15px;
       font-size: 32px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #222;
+      padding: 10px;
+      gap: 10px;
+    }
+    nav a {
+      background-color: #8B0000;
+      color: #fff;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background-color: #a30000;
     }
     .games {
       display: grid;
@@ -59,9 +77,15 @@
   <header>
     <img src="https://upload.wikimedia.org/wikipedia/en/9/9b/Diamond_Dogs_logo.svg" alt="Logo Runi Store">
     <h1>Runi Store BR</h1>
-  </header>
-
-  <section class="games">
+  </header>  <nav>
+    <a href="#">🟥 DUBLADO</a>
+    <a href="#">🟦 LEGENDADO</a>
+    <a href="#">🟩 AÇÃO</a>
+    <a href="#">🟨 CORRIDA</a>
+    <a href="#">🟪 INFANTIL</a>
+    <a href="#">⚫ TERROR</a>
+    <a href="#">🔴 TODOS OS JOGOS</a>
+  </nav>  <section class="games">
     <div class="game">
       <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Lego_Star_Wars_The_Complete_Saga.jpg/220px-Lego_Star_Wars_The_Complete_Saga.jpg" alt="LEGO Star Wars">
       <h3>LEGO Star Wars (Dublado)</h3>
