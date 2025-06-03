@@ -1,201 +1,57 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Runi Store BR - Loja PS3</title>
-<style>
-  /* Reset básico */
-  * {
-    margin: 0; padding: 0; box-sizing: border-box;
-  }
-  body {
-    background: #121212;
-    font-family: 'Arial Black', Arial, sans-serif;
-    color: #eee;
-  }
-  header {
-    background: #1a1a1a;
-    border-bottom: 3px solid #cc0000;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-  }
-  /* Logo com texto e símbolo estilizado */
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  .logo svg {
-    width: 50px;
-    height: 50px;
-    fill: #cc0000;
-  }
-  .logo-text {
-    font-size: 28px;
-    font-weight: 900;
-    color: #cc0000;
-    letter-spacing: 2px;
-    user-select: none;
-  }
-  nav {
-    margin-left: auto;
-  }
-  nav a {
-    color: #eee;
-    text-decoration: none;
-    margin-left: 25px;
-    font-weight: bold;
-    font-size: 18px;
-    transition: color 0.3s;
-  }
-  nav a:hover {
-    color: #cc0000;
-  }
-
-  main {
-    padding: 20px;
-    max-width: 960px;
-    margin: 0 auto;
-  }
-  /* Destaque do jogo principal */
-  .featured-game {
-    background: #222;
-    border: 2px solid #cc0000;
-    border-radius: 8px;
-    padding: 15px;
-    display: flex;
-    gap: 20px;
-    margin-bottom: 30px;
-  }
-  .featured-game img {
-    max-width: 180px;
-    border-radius: 6px;
-  }
-  .featured-game-info {
-    flex: 1;
-  }
-  .featured-game-info h2 {
-    color: #cc0000;
-    margin-bottom: 10px;
-    font-size: 24px;
-  }
-  .featured-game-info p {
-    line-height: 1.3;
-    margin-bottom: 12px;
-  }
-  .btn-download {
-    background: #cc0000;
-    color: #121212;
-    padding: 10px 18px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 6px;
-    user-select: none;
-    display: inline-block;
-  }
-  .btn-download:hover {
-    background: #a60000;
-  }
-
-  /* Lista simples de jogos */
-  .game-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(140px,1fr));
-    gap: 18px;
-  }
-  .game-card {
-    background: #222;
-    border: 2px solid #cc0000;
-    border-radius: 8px;
-    overflow: hidden;
-    user-select: none;
-    cursor: default;
-  }
-  .game-card img {
-    width: 100%;
-    display: block;
-  }
-  .game-card .game-name {
-    padding: 10px;
-    font-weight: bold;
-    color: #cc0000;
-    font-size: 16px;
-    text-align: center;
-  }
-
-  /* Footer simples */
-  footer {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 14px;
-    color: #666;
-    padding: 10px 0;
-  }
-
-  /* Simples responsividade para telas pequenas */
-  @media (max-width: 500px) {
-    .featured-game {
-      flex-direction: column;
-      align-items: center;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Runi Store</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
     }
-    .featured-game img {
-      max-width: 100%;
+    header {
+      background-color: #900;
+      padding: 20px 0;
     }
-  }
-</style>
+    header img {
+      height: 80px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    .categoria {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .botao {
+      background-color: #c00;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 1.2em;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .botao:hover {
+      background-color: #f00;
+    }
+  </style>
 </head>
 <body>
-<header>
-  <div class="logo" aria-label="Logo Runi Store BR">
-    <!-- Ícone simples inspirado Diamond Dogs (caveira estilizada) -->
-    <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-      <path d="M32 2C17 2 4 15 4 30c0 14 12 30 28 30s28-16 28-30C60 15 47 2 32 2zm0 54c-14 0-26-15-26-26S18 4 32 4s26 11 26 26-12 26-26 26z"/>
-      <circle cx="22" cy="30" r="5" fill="#cc0000"/>
-      <circle cx="42" cy="30" r="5" fill="#cc0000"/>
-      <path d="M18 38c4 2 12 2 16 0" stroke="#cc0000" stroke-width="2" fill="none" stroke-linecap="round"/>
-    </svg>
-    <div class="logo-text">Runi Store BR</div>
+  <header>
+    <img src="logo.png" alt="Logo Runi Store">
+    <h1>Runi Store</h1>
+  </header>  <div class="categoria">
+    <button class="botao" onclick="location.href='dublados.html'">🎙️ Dublados</button>
+    <button class="botao" onclick="location.href='legendados.html'">📝 Legendados</button>
   </div>
-  <nav role="navigation" aria-label="Menu principal">
-    <a href="#">Início</a>
-    <a href="#">BR</a>
-    <a href="#">Inglês</a>
-    <a href="#">Lançamentos</a>
-    <a href="#">Contato</a>
-  </nav>
-</header>
-<main>
-  <section class="featured-game" aria-label="Jogo em destaque">
-    <img src="https://upload.wikimedia.org/wikipedia/en/9/9b/Lego_Star_Wars_The_Skywalker_Saga_cover_art.jpg" alt="Capa do LEGO Star Wars" />
-    <div class="featured-game-info">
-      <h2>LEGO Star Wars - A Saga Skywalker</h2>
-      <p>Jogo completo em PKG, legendado em português brasileiro. Baixe direto e jogue no seu PS3 desbloqueado.</p>
-      <a href="https://www.mediafire.com/file/0e4un08jjugxbif/Pedrost_LEGO_Star_Wars_01.pkg/file" target="_blank" class="btn-download" rel="noopener">Download PKG</a>
-    </div>
-  </section>
-
-  <section aria-label="Lista de jogos">
-    <h3 style="color:#cc0000; margin-bottom: 12px;">Mais jogos</h3>
-    <div class="game-list">
-      <div class="game-card">
-        <img src="https://upload.wikimedia.org/wikipedia/en/1/14/Metal_Gear_Solid_4_cover.png" alt="Metal Gear Solid 4 Capa" />
-        <div class="game-name">Metal Gear Solid 4</div>
-      </div>
-      <div class="game-card">
-        <img src="https://upload.wikimedia.org/wikipedia/en/6/66/Uncharted_2_cover.png" alt="Uncharted 2 Capa" />
-        <div class="game-name">Uncharted 2</div>
-      </div>
-      <div class="game-card">
-        <img src="https://upload.wikimedia.org/wikipedia/en/9/94/Resident_Evil_5_box_art.jpg" alt="Resident Evil 5 Capa" />
-        <div class="game-name">Resident Evil 5</div>
-      </div>
-    </div>
-  </section>
-</main>
-<footer>
-  &copy; 2025 Runi Store BR — Todos os direitos reservados
-</footer>
 </body>
 </html>
