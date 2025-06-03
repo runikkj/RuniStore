@@ -1,57 +1,54 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Runi Store</title>
   <style>
     body {
-      background-color: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #900;
-      padding: 20px 0;
-    }
-    header img {
-      height: 80px;
-    }
-    h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-    .categoria {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
-    .botao {
-      background-color: #c00;
+      background-color: #1a1a1a;
       color: white;
-      border: none;
-      padding: 15px 30px;
-      margin: 10px;
-      font-size: 1.2em;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background 0.3s;
+      font-family: sans-serif;
+      text-align: center;
     }
-    .botao:hover {
-      background-color: #f00;
+    .game {
+      margin: 30px auto;
+      width: 300px;
+      background-color: #2b2b2b;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px red;
+    }
+    .game img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .game h2 {
+      margin: 10px 0;
+    }
+    .download {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: red;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .download:hover {
+      background-color: #cc0000;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Logo Runi Store">
-    <h1>Runi Store</h1>
-  </header>  <div class="categoria">
-    <button class="botao" onclick="location.href='dublados.html'">🎙️ Dublados</button>
-    <button class="botao" onclick="location.href='legendados.html'">📝 Legendados</button>
+
+  <h1>Runi Store - Jogos BR</h1>
+
+  <div class="game">
+    <img src="lego_star_wars.jpg" alt="LEGO Star Wars">
+    <h2>LEGO Star Wars: The Complete Saga</h2>
+    <p>DUBLADO - PKG Único</p>
+    <a class="download" href="https://www.mediafire.com/file/0e4un08jjugxbif/Pedrost_LEGO_Star_Wars_01.pkg/file" target="_blank">Baixar</a>
   </div>
+
 </body>
 </html>
