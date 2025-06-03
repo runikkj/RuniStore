@@ -2,143 +2,119 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Runi Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Runi Store BR</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #111;
-      color: white;
+      background-color: #000;
+      color: #fff;
     }
 
     header {
-      background-color: #000;
-      text-align: center;
+      background-color: #1a1a1a;
       padding: 20px;
+      text-align: center;
     }
 
     header img {
-      max-width: 200px;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #1a1a1a;
-      padding: 10px;
-      gap: 20px;
-    }
-
-    nav a {
-      color: #ff4d4d;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
+      width: 150px;
+      height: auto;
     }
 
     h1 {
       text-align: center;
-      color: #ff4d4d;
+      color: #ff4b4b;
       margin-top: 30px;
     }
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
+    .categoria {
+      margin: 40px auto;
+      max-width: 700px;
     }
 
-    .game-card {
-      background-color: #222;
+    .jogo {
+      background-color: #111;
       border: 1px solid #444;
       border-radius: 10px;
       padding: 20px;
-      width: 300px;
+      margin-bottom: 30px;
       text-align: center;
-      margin: 20px 0;
     }
 
-    .game-card img {
-      width: 100px;
+    .jogo img {
+      width: 120px;
       height: auto;
-      margin-bottom: 10px;
+      border-radius: 10px;
+      margin-bottom: 15px;
     }
 
-    .game-card h2 {
-      color: #fff;
+    .jogo h3 {
+      margin: 10px 0;
       font-size: 18px;
+      color: #fff;
     }
 
-    .download-button {
-      margin-top: 10px;
+    .jogo button {
       background-color: #ff0000;
       color: white;
-      padding: 10px 20px;
       border: none;
-      border-radius: 5px;
-      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
       cursor: pointer;
     }
 
-    .download-button:hover {
+    .jogo button:hover {
       background-color: #cc0000;
     }
 
-    .hidden {
-      display: none;
+    .categoria-titulo {
+      font-size: 24px;
+      color: #ff4b4b;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #666;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Logo Runi Store">
+    <img src="logotipo.png.png" alt="Logo Runi Store">
   </header>
 
-  <nav>
-    <a href="#" onclick="showCategory('dublados')">DUBLADOS</a>
-    <a href="#" onclick="showCategory('legendados')">LEGENDADOS</a>
-  </nav>
+  <main>
+    <!-- Categoria: Jogos Dublados -->
+    <section class="categoria">
+      <h2 class="categoria-titulo">Jogos Dublados</h2>
 
-  <h1>Jogos Dublados e Legendados</h1>
-
-  <div class="container">
-    <!-- Categoria DUBLADOS -->
-    <div id="dublados" class="category">
-      <div class="game-card">
-        <img src="lego.jpg" alt="LEGO Star Wars">
-        <h2>LEGO Star Wars (Dublado)</h2>
-        <a href="https://1fichier.com/exemplo-lego-dublado.pkg" target="_blank">
-          <button class="download-button">Baixar PKG</button>
+      <div class="jogo">
+        <img src="Lego_Star_Wars.jpg" alt="LEGO Star Wars">
+        <h3>LEGO Star Wars (Dublado)</h3>
+        <a href="https://1fichier.com/SEU-LINK" target="_blank">
+          <button>Baixar PKG</button>
         </a>
       </div>
-    </div>
 
-    <!-- Categoria LEGENDADOS -->
-    <div id="legendados" class="category hidden">
-      <div class="game-card">
-        <img src="game.jpg" alt="Exemplo Jogo">
-        <h2>Exemplo Game (Legendado)</h2>
-        <a href="https://1fichier.com/exemplo-legendado.pkg" target="_blank">
-          <button class="download-button">Baixar PKG</button>
-        </a>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <script>
-    function showCategory(category) {
-      document.querySelectorAll('.category').forEach(div => div.classList.add('hidden'));
-      document.getElementById(category).classList.remove('hidden');
-    }
+    <!-- Categoria: Jogos Legendados -->
+    <section class="categoria">
+      <h2 class="categoria-titulo">Jogos Legendados</h2>
 
-    // Mostra DUBLADOS por padrão
-    showCategory('dublados');
-  </script>
+      <!-- Aqui você pode adicionar jogos legendados futuramente -->
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Runi Store BR - Todos os direitos reservados.
+  </footer>
 </body>
 </html>
