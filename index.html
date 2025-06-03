@@ -2,128 +2,109 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Runi Store BR - Jogos PS3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Runi Store BR</title>
   <style>
-    * {
+    body {
+      background-color: #1a0000;
+      color: white;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
-    body
-    <div style="text-align: center; margin-top: 20px;">
-    <img src="logo.png" alt="Runi Store" width="180" />
-  </div>
-    {
-      background-color: #121212;
-      color: #eee;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    .logo {
       text-align: center;
-      padding: 40px 20px;
-      min-height: 100vh;
+      margin-top: 20px;
     }
 
-    h1 {
-      font-weight: 700;
-      font-size: 2.8rem;
-      margin-bottom: 40px;
-      color: #f44336;
-      text-shadow: 0 0 8px #f44336;
+    .logo img {
+      width: 180px;
     }
 
-    .game-container {
+    .titulo {
+      text-align: center;
+      font-size: 28px;
+      color: #ff4d4d;
+      margin-top: 10px;
+    }
+
+    .categorias {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .categorias a {
+      background-color: #990000;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px;
+      text-decoration: none;
+      border-radius: 8px;
+      display: inline-block;
+    }
+
+    .jogos {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
+      margin-top: 30px;
     }
 
-    .game-card {
-      background-color: #222;
-      border-radius: 15px;
-      width: 280px;
-      box-shadow: 0 0 15px #f4433666;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: default;
+    .jogo {
+      background-color: #330000;
+      border-radius: 12px;
+      padding: 10px;
+      margin: 15px;
+      width: 200px;
+      text-align: center;
+      box-shadow: 0 0 10px #ff1a1a;
     }
 
-    .game-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px #f44336cc;
-    }
-
-    .game-card img {
+    .jogo img {
       width: 100%;
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-      display: block;
-      box-shadow: 0 5px 15px #0008;
-    }
-
-    .game-info {
-      padding: 20px;
-      color: #eee;
-    }
-
-    .game-info h2 {
-      font-size: 1.4rem;
-      margin-bottom: 10px;
-      color: #f44336;
-      text-shadow: 0 0 5px #f44336bb;
-    }
-
-    .game-info p {
-      margin-bottom: 15px;
-      font-weight: 600;
-      color: #ccc;
-    }
-
-    .download-btn {
-      background: linear-gradient(145deg, #ff3b3b, #d32f2f);
-      padding: 14px 25px;
-      color: #fff;
-      text-decoration: none;
       border-radius: 8px;
-      font-weight: 700;
-      font-size: 1rem;
-      box-shadow: 0 4px 12px #ff3b3b99;
-      display: inline-block;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .download-btn:hover {
-      background: linear-gradient(145deg, #d32f2f, #b71c1c);
-      box-shadow: 0 6px 18px #b71c1ccc;
+    .jogo p {
+      margin-top: 10px;
+      font-size: 14px;
     }
 
-    @media (max-width: 600px) {
-      .game-container {
-        flex-direction: column;
-        align-items: center;
-      }
-      .game-card {
-        width: 90%;
-      }
+    a.download {
+      display: block;
+      margin-top: 8px;
+      background-color: #cc0000;
+      padding: 6px;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    a.download:hover {
+      background-color: #ff0000;
     }
   </style>
 </head>
 <body>
 
-  <h1>Runi Store BR - Jogos PS3</h1>
+  <div class="logo">
+    <img src="logo.png" alt="Logo da Runi Store" />
+  </div>
 
-  <div class="game-container">
+  <div class="titulo">Runi Store BR</div>
 
-    <div class="game-card">
-      <img src="lego_star_wars.jpg" alt="LEGO Star Wars: The Complete Saga" />
-      <div class="game-info">
-        <h2>LEGO Star Wars: The Complete Saga</h2>
-        <p>DUBLADO - PKG Único</p>
-        <a href="https://www.mediafire.com/file/0e4un08jjugxbif/Pedrost_LEGO_Star_Wars_01.pkg/file" target="_blank" rel="noopener noreferrer" class="download-btn">
-          Baixar
-        </a>
-      </div>
+  <div class="categorias">
+    <a href="#dublados">🎙️ Dublados</a>
+    <a href="#legendados">📜 Legendados</a>
+  </div>
+
+  <div class="jogos" id="dublados">
+    <div class="jogo">
+      <img src="lego.jpg" alt="LEGO Star Wars" />
+      <p>LEGO Star Wars (DUBLADO)</p>
+      <a class="download" href="https://www.mediafire.com/file/0e4un08jjugxbif/Pedrost_LEGO_Star_Wars_01.pkg/file">Baixar PKG</a>
     </div>
-
   </div>
 
 </body>
