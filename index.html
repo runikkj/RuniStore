@@ -23,23 +23,42 @@
       height: auto;
     }
 
-    h1 {
+    .descricao-loja {
+      max-width: 800px;
+      margin: 30px auto 10px auto;
+      padding: 0 20px;
       text-align: center;
+      color: #ccc;
+      font-size: 16px;
+    }
+
+    h2 {
       color: #ff4b4b;
-      margin-top: 30px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .categorias-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 30px 10px;
     }
 
     .categoria {
-      margin: 40px auto;
-      max-width: 700px;
+      background-color: #111;
+      border: 1px solid #444;
+      border-radius: 15px;
+      padding: 20px;
+      width: 340px;
     }
 
     .jogo {
-      background-color: #111;
-      border: 1px solid #444;
+      background-color: #222;
       border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 30px;
+      padding: 15px;
+      margin-bottom: 25px;
       text-align: center;
     }
 
@@ -47,46 +66,31 @@
       width: 120px;
       height: auto;
       border-radius: 10px;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     .jogo h3 {
+      font-size: 16px;
       margin: 10px 0;
-      font-size: 18px;
-      color: #fff;
+    }
+
+    .jogo p {
+      font-size: 14px;
+      color: #ccc;
     }
 
     .jogo button {
       background-color: #ff0000;
       color: white;
       border: none;
-      padding: 10px 20px;
+      padding: 8px 16px;
       border-radius: 8px;
-      font-size: 16px;
+      font-size: 14px;
       cursor: pointer;
     }
 
     .jogo button:hover {
       background-color: #cc0000;
-    }
-
-    .categoria-titulo {
-      font-size: 24px;
-      color: #ff4b4b;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #666;
-    }
-
-    .links-download {
-      margin-top: 15px;
-      text-align: left;
     }
 
     .links-download a {
@@ -99,6 +103,14 @@
     .links-download a:hover {
       text-decoration: underline;
     }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #666;
+      margin-top: 30px;
+    }
   </style>
 </head>
 <body>
@@ -106,15 +118,19 @@
     <img src="logo.png" alt="Logo Runi Store">
   </header>
 
-  <main>
-    <!-- Categoria: Jogos Dublados -->
+  <div class="descricao-loja">
+    A <strong>Runi Store BR</strong> é especializada em jogos dublados e legendados em português para PS3 e PS2, oferecendo qualidade e nostalgia em cada download.
+  </div>
+
+  <div class="categorias-container">
+    <!-- PS3 -->
     <section class="categoria">
-      <h2 class="categoria-titulo">Jogos Dublados</h2>
+      <h2>PS3</h2>
 
       <div class="jogo">
         <img src="Lego_Star_Wars.jpg" alt="LEGO Star Wars">
         <h3>LEGO Star Wars (Dublado)</h3>
-        <a href="https://www.mediafire.com/file/0e4un08jjugxbif/Pedrost_LEGO_Star_Wars_01.pkg" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.mediafire.com/file/0e4un08jjugxbif/Pedrost_LEGO_Star_Wars_01.pkg" target="_blank">
           <button>Baixar PKG</button>
         </a>
       </div>
@@ -122,7 +138,7 @@
       <div class="jogo">
         <img id="img-ufc" src="ufc_cover.jpg" alt="UFC Undisputed 3">
         <h3>UFC Undisputed 3 (PT-BR)</h3>
-        <p>Jogo completo em português, dividido em 6 partes (.pkg).</p>
+        <p>Dividido em 6 partes (.pkg)</p>
         <div class="links-download">
           <a href="https://www.mediafire.com/file/0o9z5c0rcrd5kxt/1+-+Espacy+-+UFC+Undisputed+3.pkg/file" target="_blank">📥 Parte 1</a>
           <a href="https://www.mediafire.com/file/ff34wabbos47i40/2+-+Espacy+-+UFC+Undisputed+3.pkg/file" target="_blank">📥 Parte 2</a>
@@ -134,102 +150,43 @@
       </div>
     </section>
 
-    <!-- Categoria: Jogos Legendados -->
+    <!-- PS2 -->
     <section class="categoria">
-      <h2 class="categoria-titulo">Jogos Legendados</h2>
-      <!-- Você pode adicionar mais aqui futuramente -->
-    </section>
-
-    <!-- Categoria: PS2 no PS3 -->
-    <section class="categoria">
-      <h2 class="categoria-titulo">Jogos de PS2 no PS3</h2>
+      <h2>PS2</h2>
 
       <div class="jogo">
         <img id="img-silent-hill" src="silent_hill_3.jpg" alt="Silent Hill 3">
         <h3>Silent Hill 3 (Dublado e Legendado)</h3>
-        <p>Versão de PS2 jogável no PS3 com dublagem e legendas em português.</p>
-        <a href="https://datavaults.co/cworma3crk7s/Espacy_-_Silent_Hill_3.pkg" target="_blank" rel="noopener noreferrer">
+        <p>Versão de PS2 jogável no PS3</p>
+        <a href="https://datavaults.co/cworma3crk7s/Espacy_-_Silent_Hill_3.pkg" target="_blank">
           <button>Baixar PKG</button>
         </a>
       </div>
     </section>
-  </main>
+  </div>
 
   <footer>
     &copy; 2025 Runi Store BR - Todos os direitos reservados.
   </footer>
 
-  <!-- Scripts para carregar imagens alternativas -->
+  <!-- Scripts para testar imagens -->
   <script>
     const imgUfc = document.getElementById('img-ufc');
+    const imagensUFC = ['ufc_cover.jpg', 'ufc_cover.png'];
 
-    function tryImage(srcList, index = 0) {
-      if (index >= srcList.length) {
-        console.warn('Nenhuma imagem válida encontrada para UFC Undisputed 3.');
-        imgUfc.src = 'imagem-nao-disponivel.jpg';
-        return;
-      }
-
-      const testSrc = srcList[index];
-      console.log('Tentando carregar imagem:', testSrc);
-
-      const testImg = new Image();
-
-      testImg.onload = () => {
-        console.log('Imagem carregada com sucesso:', testSrc);
-        imgUfc.src = testSrc;
-      };
-
-      testImg.onerror = () => {
-        console.log('Falha ao carregar imagem:', testSrc);
-        tryImage(srcList, index + 1);
-      };
-
-      testImg.src = testSrc;
+    function carregarImagem(imgEl, lista, i = 0) {
+      if (i >= lista.length) return;
+      const tempImg = new Image();
+      tempImg.onload = () => imgEl.src = lista[i];
+      tempImg.onerror = () => carregarImagem(imgEl, lista, i + 1);
+      tempImg.src = lista[i];
     }
 
-    const imagens = [
-      'ufc_cover.jpg',
-      'ufc_cover.png'
-    ];
+    carregarImagem(imgUfc, imagensUFC);
 
-    tryImage(imagens);
-  </script>
-
-  <script>
     const imgSilent = document.getElementById('img-silent-hill');
-
-    function tryImageSilent(srcList, index = 0) {
-      if (index >= srcList.length) {
-        console.warn('Imagem do Silent Hill 3 não carregou.');
-        imgSilent.src = 'imagem-nao-disponivel.jpg';
-        return;
-      }
-
-      const testSrc = srcList[index];
-      console.log('Tentando carregar imagem Silent Hill 3:', testSrc);
-
-      const testImg = new Image();
-
-      testImg.onload = () => {
-        console.log('Imagem carregada com sucesso:', testSrc);
-        imgSilent.src = testSrc;
-      };
-
-      testImg.onerror = () => {
-        console.log('Falha ao carregar imagem Silent Hill 3:', testSrc);
-        tryImageSilent(srcList, index + 1);
-      };
-
-      testImg.src = testSrc;
-    }
-
-    const imagensSilent = [
-      'silent_hill_3.jpg',
-      'silent_hill_3.png'
-    ];
-
-    tryImageSilent(imagensSilent);
+    const imagensSilent = ['silent_hill_3.jpg', 'silent_hill_3.png'];
+    carregarImagem(imgSilent, imagensSilent);
   </script>
 </body>
 </html>
