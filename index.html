@@ -120,8 +120,7 @@
       </div>
 
       <div class="jogo">
-        <!-- Coloque um src temporário que será trocado pelo script -->
-        <img id="img-ufc" src="UFC_Undisputed_3_Cover.jpg" alt="UFC Undisputed 3">
+        <img id="img-ufc" src="ufc_cover.jpg" alt="UFC Undisputed 3">
         <h3>UFC Undisputed 3 (PT-BR)</h3>
         <p>Jogo completo em português, dividido em 6 partes (.pkg).</p>
         <div class="links-download">
@@ -153,8 +152,8 @@
 
     function tryImage(srcList, index = 0) {
       if (index >= srcList.length) {
-        // Nenhuma imagem disponível, pode colocar uma imagem padrão ou deixar vazio
-        imgUfc.src = 'imagem-nao-disponivel.jpg'; // opcional, coloque uma imagem fallback
+        // fallback opcional
+        imgUfc.src = 'imagem-nao-disponivel.jpg';
         return;
       }
 
@@ -172,10 +171,9 @@
       testImg.src = testSrc;
     }
 
-    // Lista de imagens para tentar carregar, na ordem de preferência
     const imagens = [
-      'UFC_Undisputed_3_Cover.jpg',
-      'UFC_Undisputed_3_Cover.png'
+      'ufc_cover.jpg',
+      'ufc_cover.png'
     ];
 
     tryImage(imagens);
