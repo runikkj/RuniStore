@@ -120,10 +120,6 @@
       </div>
 
       <div class="jogo">
-        <!-- 
-          Se sua imagem estiver numa subpasta, por exemplo "img/ufc_cover.jpg", 
-          troque o caminho abaixo para "img/ufc_cover.jpg" e atualize no array "imagens" do script também.
-        -->
         <img id="img-ufc" src="ufc_cover.jpg" alt="UFC Undisputed 3">
         <h3>UFC Undisputed 3 (PT-BR)</h3>
         <p>Jogo completo em português, dividido em 6 partes (.pkg).</p>
@@ -136,14 +132,26 @@
           <a href="https://www.mediafire.com/file/ira5l751wurl3nl/6+-+Espacy+-+UFC+Undisputed+3.pkg/file" target="_blank">📥 Parte 6</a>
         </div>
       </div>
-
     </section>
 
     <!-- Categoria: Jogos Legendados -->
     <section class="categoria">
       <h2 class="categoria-titulo">Jogos Legendados</h2>
+      <!-- Você pode adicionar mais aqui futuramente -->
+    </section>
 
-      <!-- Aqui você pode adicionar jogos legendados futuramente -->
+    <!-- Categoria: PS2 no PS3 -->
+    <section class="categoria">
+      <h2 class="categoria-titulo">Jogos de PS2 no PS3</h2>
+
+      <div class="jogo">
+        <img id="img-silent-hill" src="silent_hill_3.jpg" alt="Silent Hill 3">
+        <h3>Silent Hill 3 (Dublado e Legendado)</h3>
+        <p>Versão de PS2 jogável no PS3 com dublagem e legendas em português.</p>
+        <a href="https://datavaults.co/cworma3crk7s/Espacy_-_Silent_Hill_3.pkg" target="_blank" rel="noopener noreferrer">
+          <button>Baixar PKG</button>
+        </a>
+      </div>
     </section>
   </main>
 
@@ -151,14 +159,14 @@
     &copy; 2025 Runi Store BR - Todos os direitos reservados.
   </footer>
 
+  <!-- Scripts para carregar imagens alternativas -->
   <script>
     const imgUfc = document.getElementById('img-ufc');
 
     function tryImage(srcList, index = 0) {
       if (index >= srcList.length) {
         console.warn('Nenhuma imagem válida encontrada para UFC Undisputed 3.');
-        // Você pode colocar uma imagem fallback ou deixar a imagem quebrada para saber que não carregou
-        imgUfc.src = 'imagem-nao-disponivel.jpg'; // opcional, só se tiver essa imagem
+        imgUfc.src = 'imagem-nao-disponivel.jpg';
         return;
       }
 
@@ -186,6 +194,42 @@
     ];
 
     tryImage(imagens);
+  </script>
+
+  <script>
+    const imgSilent = document.getElementById('img-silent-hill');
+
+    function tryImageSilent(srcList, index = 0) {
+      if (index >= srcList.length) {
+        console.warn('Imagem do Silent Hill 3 não carregou.');
+        imgSilent.src = 'imagem-nao-disponivel.jpg';
+        return;
+      }
+
+      const testSrc = srcList[index];
+      console.log('Tentando carregar imagem Silent Hill 3:', testSrc);
+
+      const testImg = new Image();
+
+      testImg.onload = () => {
+        console.log('Imagem carregada com sucesso:', testSrc);
+        imgSilent.src = testSrc;
+      };
+
+      testImg.onerror = () => {
+        console.log('Falha ao carregar imagem Silent Hill 3:', testSrc);
+        tryImageSilent(srcList, index + 1);
+      };
+
+      testImg.src = testSrc;
+    }
+
+    const imagensSilent = [
+      'silent_hill_3.jpg',
+      'silent_hill_3.png'
+    ];
+
+    tryImageSilent(imagensSilent);
   </script>
 </body>
 </html>
