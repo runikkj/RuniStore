@@ -155,7 +155,16 @@
       <h2>PS2</h2>
 
       <div class="jogo">
-        <img id="img-silent-hill" src="silent_hill_3.jpg" alt="Silent Hill 3">
+        <img id="img-silent-hill-2" src="silent_hill_2.jpg" alt="Silent Hill 2">
+        <h3>Silent Hill 2 (Dublado)</h3>
+        <p>Versão adaptada de PS2 para PS3 (.pkg)</p>
+        <a href="https://datavaults.co/8eh20rbku0yu/Espacy_-_Silent_Hill_2.pkg" target="_blank">
+          <button>Baixar PKG</button>
+        </a>
+      </div>
+
+      <div class="jogo">
+        <img id="img-silent-hill-3" src="silent_hill_3.jpg" alt="Silent Hill 3">
         <h3>Silent Hill 3 (Dublado e Legendado)</h3>
         <p>Versão adaptada de PS2 para PS3 (.pkg)</p>
         <a href="https://datavaults.co/cworma3crk7s/Espacy_-_Silent_Hill_3.pkg" target="_blank">
@@ -169,22 +178,19 @@
     &copy; 2025 Runi Store BR - Todos os direitos reservados.
   </footer>
 
-  <!-- Scripts para testar imagens -->
   <script>
-    const imgUfc = document.getElementById('img-ufc');
-    const imagensUFC = ['ufc_cover.jpg', 'ufc_cover.png'];
-    function carregarImagem(imgEl, lista, i = 0) {
-      if (i >= lista.length) return;
-      const tempImg = new Image();
-      tempImg.onload = () => imgEl.src = lista[i];
-      tempImg.onerror = () => carregarImagem(imgEl, lista, i + 1);
-      tempImg.src = lista[i];
-    }
-    carregarImagem(imgUfc, imagensUFC);
+    const carregarImagem = (id, lista, i = 0) => {
+      const img = document.getElementById(id);
+      if (!img || i >= lista.length) return;
+      const temp = new Image();
+      temp.onload = () => img.src = lista[i];
+      temp.onerror = () => carregarImagem(id, lista, i + 1);
+      temp.src = lista[i];
+    };
 
-    const imgSilent = document.getElementById('img-silent-hill');
-    const imagensSilent = ['silent_hill_3.jpg', 'silent_hill_3.png'];
-    carregarImagem(imgSilent, imagensSilent);
+    carregarImagem("img-ufc", ["ufc_cover.jpg", "ufc_cover.png"]);
+    carregarImagem("img-silent-hill-2", ["silent_hill_2.jpg", "silent_hill_2.png"]);
+    carregarImagem("img-silent-hill-3", ["silent_hill_3.jpg", "silent_hill_3.png"]);
   </script>
 </body>
 </html>
