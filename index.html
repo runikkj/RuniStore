@@ -119,7 +119,7 @@
   </header>
 
   <div class="descricao-loja">
-    A <strong>Runi Store BR</strong> é especializada em jogos dublados e legendados em português para PS3 e PS2, oferecendo qualidade e nostalgia em cada download.
+    A <strong>Runi Store BR</strong> é especializada em jogos dublados e legendados em português para PS3. Também oferecemos ports de jogos clássicos de PS2 adaptados para funcionarem no PS3 em formato .pkg, mantendo a nostalgia com praticidade e qualidade.
   </div>
 
   <div class="categorias-container">
@@ -157,7 +157,7 @@
       <div class="jogo">
         <img id="img-silent-hill" src="silent_hill_3.jpg" alt="Silent Hill 3">
         <h3>Silent Hill 3 (Dublado e Legendado)</h3>
-        <p>Versão de PS2 jogável no PS3</p>
+        <p>Versão adaptada de PS2 para PS3 (.pkg)</p>
         <a href="https://datavaults.co/cworma3crk7s/Espacy_-_Silent_Hill_3.pkg" target="_blank">
           <button>Baixar PKG</button>
         </a>
@@ -173,7 +173,6 @@
   <script>
     const imgUfc = document.getElementById('img-ufc');
     const imagensUFC = ['ufc_cover.jpg', 'ufc_cover.png'];
-
     function carregarImagem(imgEl, lista, i = 0) {
       if (i >= lista.length) return;
       const tempImg = new Image();
@@ -181,7 +180,6 @@
       tempImg.onerror = () => carregarImagem(imgEl, lista, i + 1);
       tempImg.src = lista[i];
     }
-
     carregarImagem(imgUfc, imagensUFC);
 
     const imgSilent = document.getElementById('img-silent-hill');
