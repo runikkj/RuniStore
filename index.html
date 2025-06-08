@@ -120,7 +120,8 @@
       </div>
 
       <div class="jogo">
-        <img src="https://upload.wikimedia.org/wikipedia/en/6/67/UFC_Undisputed_3_Cover.jpg" alt="UFC Undisputed 3">
+        <!-- Coloque um src temporário que será trocado pelo script -->
+        <img id="img-ufc" src="UFC_Undisputed_3_Cover.jpg" alt="UFC Undisputed 3">
         <h3>UFC Undisputed 3 (PT-BR)</h3>
         <p>Jogo completo em português, dividido em 6 partes (.pkg).</p>
         <div class="links-download">
@@ -146,5 +147,38 @@
   <footer>
     &copy; 2025 Runi Store BR - Todos os direitos reservados.
   </footer>
+
+  <script>
+    const imgUfc = document.getElementById('img-ufc');
+
+    function tryImage(srcList, index = 0) {
+      if (index >= srcList.length) {
+        // Nenhuma imagem disponível, pode colocar uma imagem padrão ou deixar vazio
+        imgUfc.src = 'imagem-nao-disponivel.jpg'; // opcional, coloque uma imagem fallback
+        return;
+      }
+
+      const testSrc = srcList[index];
+      const testImg = new Image();
+
+      testImg.onload = () => {
+        imgUfc.src = testSrc;
+      };
+
+      testImg.onerror = () => {
+        tryImage(srcList, index + 1);
+      };
+
+      testImg.src = testSrc;
+    }
+
+    // Lista de imagens para tentar carregar, na ordem de preferência
+    const imagens = [
+      'UFC_Undisputed_3_Cover.jpg',
+      'UFC_Undisputed_3_Cover.png'
+    ];
+
+    tryImage(imagens);
+  </script>
 </body>
 </html>
