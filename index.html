@@ -120,6 +120,10 @@
       </div>
 
       <div class="jogo">
+        <!-- 
+          Se sua imagem estiver numa subpasta, por exemplo "img/ufc_cover.jpg", 
+          troque o caminho abaixo para "img/ufc_cover.jpg" e atualize no array "imagens" do script também.
+        -->
         <img id="img-ufc" src="ufc_cover.jpg" alt="UFC Undisputed 3">
         <h3>UFC Undisputed 3 (PT-BR)</h3>
         <p>Jogo completo em português, dividido em 6 partes (.pkg).</p>
@@ -152,19 +156,24 @@
 
     function tryImage(srcList, index = 0) {
       if (index >= srcList.length) {
-        // fallback opcional
-        imgUfc.src = 'imagem-nao-disponivel.jpg';
+        console.warn('Nenhuma imagem válida encontrada para UFC Undisputed 3.');
+        // Você pode colocar uma imagem fallback ou deixar a imagem quebrada para saber que não carregou
+        imgUfc.src = 'imagem-nao-disponivel.jpg'; // opcional, só se tiver essa imagem
         return;
       }
 
       const testSrc = srcList[index];
+      console.log('Tentando carregar imagem:', testSrc);
+
       const testImg = new Image();
 
       testImg.onload = () => {
+        console.log('Imagem carregada com sucesso:', testSrc);
         imgUfc.src = testSrc;
       };
 
       testImg.onerror = () => {
+        console.log('Falha ao carregar imagem:', testSrc);
         tryImage(srcList, index + 1);
       };
 
