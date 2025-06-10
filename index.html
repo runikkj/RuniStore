@@ -24,54 +24,54 @@
     }
 
     .descricao-loja {
-      max-width: 800px;
-      margin: 30px auto 10px auto;
-      padding: 0 20px;
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: 16px;
       text-align: center;
       color: #ccc;
-      font-size: 16px;
+      line-height: 1.5;
     }
 
-    h2 {
-      color: #ff4b4b;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .categorias-container {
+    .categorias {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 40px;
-      padding: 30px 10px;
+      padding: 20px;
     }
 
-    .categoria {
-      background-color: #111;
-      border: 1px solid #444;
-      border-radius: 15px;
-      padding: 20px;
-      width: 340px;
+    .coluna {
+      flex: 1;
+      max-width: 400px;
+    }
+
+    .categoria-titulo {
+      font-size: 24px;
+      color: #ff4b4b;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
     .jogo {
-      background-color: #222;
+      background-color: #111;
+      border: 1px solid #444;
       border-radius: 10px;
-      padding: 15px;
-      margin-bottom: 25px;
+      padding: 20px;
+      margin-bottom: 30px;
       text-align: center;
     }
 
     .jogo img {
-      width: 120px;
+      width: 150px;
       height: auto;
       border-radius: 10px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     .jogo h3 {
-      font-size: 16px;
       margin: 10px 0;
+      font-size: 18px;
+      color: #fff;
     }
 
     .jogo p {
@@ -83,14 +83,20 @@
       background-color: #ff0000;
       color: white;
       border: none;
-      padding: 8px 16px;
+      padding: 10px 20px;
       border-radius: 8px;
-      font-size: 14px;
+      font-size: 16px;
       cursor: pointer;
+      margin-top: 10px;
     }
 
     .jogo button:hover {
       background-color: #cc0000;
+    }
+
+    .links-download {
+      margin-top: 15px;
+      text-align: left;
     }
 
     .links-download a {
@@ -109,7 +115,6 @@
       padding: 20px;
       font-size: 14px;
       color: #666;
-      margin-top: 30px;
     }
   </style>
 </head>
@@ -119,16 +124,16 @@
   </header>
 
   <div class="descricao-loja">
-    A <strong>Runi Store BR</strong> é especializada em jogos dublados e legendados em português para PS3. Também oferecemos ports de jogos clássicos de PS2 adaptados para funcionarem no PS3 em formato .pkg, mantendo a nostalgia com praticidade e qualidade.
+    <p><strong>Runi Store BR</strong> é especializada em jogos dublados e legendados em português para PS3. Também oferecemos ports de jogos clássicos de PS2 adaptados para funcionarem no PS3 em formato <code>.pkg</code>, mantendo a nostalgia com praticidade e qualidade.</p>
   </div>
 
-  <div class="categorias-container">
-    <!-- PS3 -->
-    <section class="categoria">
-      <h2>PS3</h2>
+  <main class="categorias">
+    <!-- Coluna PS3 -->
+    <section class="coluna">
+      <h2 class="categoria-titulo">PS3</h2>
 
       <div class="jogo">
-        <img src="Lego_Star_Wars.jpg" alt="LEGO Star Wars">
+        <img id="img-lego" src="Lego_Star_Wars.jpg" alt="LEGO Star Wars">
         <h3>LEGO Star Wars (Dublado)</h3>
         <a href="https://www.mediafire.com/file/0e4un08jjugxbif/Pedrost_LEGO_Star_Wars_01.pkg" target="_blank">
           <button>Baixar PKG</button>
@@ -148,11 +153,21 @@
           <a href="https://www.mediafire.com/file/ira5l751wurl3nl/6+-+Espacy+-+UFC+Undisputed+3.pkg/file" target="_blank">📥 Parte 6</a>
         </div>
       </div>
+
+      <div class="jogo">
+        <img id="img-shadow" src="shadow_of_the_colossos.jpg" alt="Shadow of the Colossus">
+        <h3>Shadow of the Colossus HD</h3>
+        <p>Versão PS3 dividida em 2 partes (.pkg)</p>
+        <div class="links-download">
+          <a href="https://www.mediafire.com/file/05paifftwhr77a5/1+-+Espacy+-+Shadow+of+the+Colossus.pkg/file" target="_blank">📥 Parte 1</a>
+          <a href="https://www.mediafire.com/file/49fhg2ugtcqj6z6/2+-+Espacy+-+Shadow+of+the+Colossus.pkg/file" target="_blank">📥 Parte 2</a>
+        </div>
+      </div>
     </section>
 
-    <!-- PS2 -->
-    <section class="categoria">
-      <h2>PS2</h2>
+    <!-- Coluna PS2 -->
+    <section class="coluna">
+      <h2 class="categoria-titulo">PS2</h2>
 
       <div class="jogo">
         <img id="img-silent-hill-2" src="silent_hill_2.jpg" alt="Silent Hill 2">
@@ -172,7 +187,7 @@
         </a>
       </div>
     </section>
-  </div>
+  </main>
 
   <footer>
     &copy; 2025 Runi Store BR - Todos os direitos reservados.
@@ -188,9 +203,11 @@
       temp.src = lista[i];
     };
 
+    carregarImagem("img-lego", ["Lego_Star_Wars.jpg", "Lego_Star_Wars.png"]);
     carregarImagem("img-ufc", ["ufc_cover.jpg", "ufc_cover.png"]);
     carregarImagem("img-silent-hill-2", ["silent_hill_2.jpg", "silent_hill_2.png"]);
     carregarImagem("img-silent-hill-3", ["silent_hill_3.jpg", "silent_hill_3.png"]);
+    carregarImagem("img-shadow", ["shadow_of_the_colossos.jpg", "shadow_of_the_colossos.png"]);
   </script>
 </body>
 </html>
