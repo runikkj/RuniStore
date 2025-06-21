@@ -24,16 +24,12 @@
     }
 
     .descricao-loja {
+      max-width: 800px;
+      margin: 40px auto 0 auto;
       text-align: center;
       color: #ccc;
-      margin: 20px;
       font-size: 16px;
-    }
-
-    h1 {
-      text-align: center;
-      color: #ff4b4b;
-      margin-top: 30px;
+      line-height: 1.5;
     }
 
     .categoria {
@@ -63,6 +59,11 @@
       color: #fff;
     }
 
+    .jogo p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
     .jogo button {
       background-color: #ff0000;
       color: white;
@@ -88,7 +89,7 @@
       text-align: center;
       padding: 20px;
       font-size: 14px;
-      color: #666;
+      color: #ccc;
     }
 
     .links-download {
@@ -114,52 +115,59 @@
   </header>
 
   <div class="descricao-loja">
-    A Runi Store BR é focada em disponibilizar jogos dublados e legendados em português. Jogos de PS2 são versões portadas para PS3 (.pkg) e funcionam diretamente no console. Aproveite!
+    <p>Bem-vindo à <strong>Runi Store BR</strong>! Aqui você encontra jogos <strong>dublados</strong> e <strong>legendados</strong> em português para PS3 e PS2. Os jogos de PS2 são adaptados no formato <strong>.pkg</strong> para rodar no PS3.</p>
   </div>
 
   <main>
     <!-- Categoria: PS3 -->
-    <section class="categoria">
+    <section class="categoria" id="categoria-ps3">
       <h2 class="categoria-titulo">PS3</h2>
 
+      <!-- UFC Undisputed 3 -->
       <div class="jogo">
         <img src="capa_ufc.jpg" alt="UFC Undisputed 3">
-        <h3>UFC Undisputed 3</h3>
+        <h3>UFC Undisputed 3 (PT-BR)</h3>
         <p>Jogo completo em português, dividido em 6 partes (.pkg).</p>
         <div class="links-download">
-          <a href="https://www.mediafire.com/file/0o9z5c0rcrd5kxt/1+-+Espacy+-+UFC+Undisputed+3.pkg/file" target="_blank">📥 Parte 1</a>
-          <a href="https://www.mediafire.com/file/ff34wabbos47i40/2+-+Espacy+-+UFC+Undisputed+3.pkg/file" target="_blank">📥 Parte 2</a>
-          <a href="https://www.mediafire.com/file/s5mnm2kgg6rf6vx/3+-+Espacy+-+UFC+Undisputed+3.pkg/file" target="_blank">📥 Parte 3</a>
-          <a href="https://www.mediafire.com/file/b11kk34sn11op5l/4+-+Espacy+-+UFC+Undisputed+3.pkg/file" target="_blank">📥 Parte 4</a>
-          <a href="https://www.mediafire.com/file/cveju8fjnfr6v1j/5+-+Espacy+-+UFC+Undisputed+3.pkg/file" target="_blank">📥 Parte 5</a>
-          <a href="https://www.mediafire.com/file/ira5l751wurl3nl/6+-+Espacy+-+UFC+Undisputed+3.pkg/file" target="_blank">📥 Parte 6</a>
+          <a href="https://www.mediafire.com/file/0o9z5c0rcrd5kxt/1+-+Espacy+-+UFC+Undisputed+3.pkg/file" target="_blank">Parte 1</a>
+          <a href="https://www.mediafire.com/file/ff34wabbos47i40/2+-+Espacy+-+UFC+Undisputed+3.pkg/file" target="_blank">Parte 2</a>
+          <a href="https://www.mediafire.com/file/s5mnm2kgg6rf6vx/3+-+Espacy+-+UFC+Undisputed+3.pkg/file" target="_blank">Parte 3</a>
+          <a href="https://www.mediafire.com/file/b11kk34sn11op5l/4+-+Espacy+-+UFC+Undisputed+3.pkg/file" target="_blank">Parte 4</a>
+          <a href="https://www.mediafire.com/file/cveju8fjnfr6v1j/5+-+Espacy+-+UFC+Undisputed+3.pkg/file" target="_blank">Parte 5</a>
+          <a href="https://www.mediafire.com/file/ira5l751wurl3nl/6+-+Espacy+-+UFC+Undisputed+3.pkg/file" target="_blank">Parte 6</a>
         </div>
       </div>
     </section>
 
     <!-- Categoria: PS2 -->
-    <section class="categoria">
+    <section class="categoria" id="categoria-ps2">
       <h2 class="categoria-titulo">PS2</h2>
 
+      <!-- Silent Hill 2 -->
       <div class="jogo">
         <img src="silent_hill_2.jpg" alt="Silent Hill 2">
-        <h3>Silent Hill 2</h3>
+        <h3>Silent Hill 2 (Dublado e Legendado)</h3>
+        <p>Versão PS2 em PKG para PS3, com áudio dublado e legendas em português.</p>
         <a href="https://datavaults.co/8eh20rbku0yu/Espacy_-_Silent_Hill_2.pkg" target="_blank" rel="noopener noreferrer">
           <button>Baixar PKG</button>
         </a>
       </div>
 
+      <!-- Silent Hill 3 -->
       <div class="jogo">
         <img src="silent_hill_3.jpg" alt="Silent Hill 3">
-        <h3>Silent Hill 3</h3>
+        <h3>Silent Hill 3 (Dublado e Legendado)</h3>
+        <p>Versão PS2 em PKG para PS3, com áudio dublado e legendas em português.</p>
         <a href="https://datavaults.co/cworma3crk7s/Espacy_-_Silent_Hill_3.pkg" target="_blank" rel="noopener noreferrer">
           <button>Baixar PKG</button>
         </a>
       </div>
 
+      <!-- GTA San Andreas -->
       <div class="jogo">
         <img src="gta_san_andreas.jpg" alt="GTA San Andreas">
-        <h3>GTA San Andreas</h3>
+        <h3>GTA San Andreas (Legendado)</h3>
+        <p>Versão PS2 em PKG para PS3, com legendas em português.</p>
         <a href="https://www.mediafire.com/file/1dvk96c1nj3077i/Grand+Theft+Auto+San+Andreas+PS3.pkg/file" target="_blank" rel="noopener noreferrer">
           <button>Baixar PKG</button>
         </a>
@@ -168,7 +176,7 @@
   </main>
 
   <footer>
-    Obrigado por visitar! Compartilhe a Runi Store BR com seus amigos 💾
+    <p>Obrigado por visitar a Runi Store BR! Se curtir os jogos, compartilhe o site com seus amigos.</p>
   </footer>
 </body>
 </html>
