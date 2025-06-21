@@ -24,32 +24,23 @@
     }
 
     .descricao-loja {
-      max-width: 700px;
-      margin: 20px auto;
-      font-size: 16px;
+      max-width: 800px;
+      margin: 40px auto 0 auto;
       text-align: center;
       color: #ccc;
+      font-size: 16px;
       line-height: 1.5;
     }
 
-    .categorias {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-      padding: 20px;
-    }
-
-    .coluna {
-      flex: 1;
-      max-width: 400px;
-    }
-
-    .categoria-titulo {
-      font-size: 24px;
-      color: #ff4b4b;
-      margin-bottom: 20px;
+    h1 {
       text-align: center;
+      color: #ff4b4b;
+      margin-top: 30px;
+    }
+
+    .categoria {
+      margin: 40px auto;
+      max-width: 700px;
     }
 
     .jogo {
@@ -62,7 +53,7 @@
     }
 
     .jogo img {
-      width: 150px;
+      width: 120px;
       height: auto;
       border-radius: 10px;
       margin-bottom: 15px;
@@ -74,11 +65,6 @@
       color: #fff;
     }
 
-    .jogo p {
-      font-size: 14px;
-      color: #ccc;
-    }
-
     .jogo button {
       background-color: #ff0000;
       color: white;
@@ -87,11 +73,24 @@
       border-radius: 8px;
       font-size: 16px;
       cursor: pointer;
-      margin-top: 10px;
     }
 
     .jogo button:hover {
       background-color: #cc0000;
+    }
+
+    .categoria-titulo {
+      font-size: 24px;
+      color: #ff4b4b;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #ccc;
     }
 
     .links-download {
@@ -109,13 +108,6 @@
     .links-download a:hover {
       text-decoration: underline;
     }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #666;
-    }
   </style>
 </head>
 <body>
@@ -124,26 +116,19 @@
   </header>
 
   <div class="descricao-loja">
-    <p><strong>Runi Store BR</strong> é especializada em jogos dublados e legendados em português para PS3. Também oferecemos ports de jogos clássicos de PS2 adaptados para funcionarem no PS3 em formato <code>.pkg</code>, mantendo a nostalgia com praticidade e qualidade.</p>
+    <p>Bem-vindo à <strong>Runi Store BR</strong>! Aqui você encontra jogos <strong>dublados</strong> e <strong>legendados</strong> em português para PS3 e PS2. Os jogos de PS2 são adaptados no formato <strong>.pkg</strong> para rodar no PS3.</p>
   </div>
 
-  <main class="categorias">
-    <!-- Coluna PS3 -->
-    <section class="coluna">
+  <main>
+    <!-- Categoria: PS3 -->
+    <section class="categoria" id="categoria-ps3">
       <h2 class="categoria-titulo">PS3</h2>
 
+      <!-- UFC Undisputed 3 -->
       <div class="jogo">
-        <img id="img-lego" src="Lego_Star_Wars.jpg" alt="LEGO Star Wars">
-        <h3>LEGO Star Wars (Dublado)</h3>
-        <a href="https://www.mediafire.com/file/0e4un08jjugxbif/Pedrost_LEGO_Star_Wars_01.pkg" target="_blank">
-          <button>Baixar PKG</button>
-        </a>
-      </div>
-
-      <div class="jogo">
-        <img id="img-ufc" src="ufc_cover.jpg" alt="UFC Undisputed 3">
+        <img src="UFC_Undisputed_3_Cover.jpg" alt="UFC Undisputed 3">
         <h3>UFC Undisputed 3 (PT-BR)</h3>
-        <p>Dividido em 6 partes (.pkg)</p>
+        <p>Jogo completo em português, dividido em 6 partes (.pkg).</p>
         <div class="links-download">
           <a href="https://www.mediafire.com/file/0o9z5c0rcrd5kxt/1+-+Espacy+-+UFC+Undisputed+3.pkg/file" target="_blank">📥 Parte 1</a>
           <a href="https://www.mediafire.com/file/ff34wabbos47i40/2+-+Espacy+-+UFC+Undisputed+3.pkg/file" target="_blank">📥 Parte 2</a>
@@ -153,36 +138,38 @@
           <a href="https://www.mediafire.com/file/ira5l751wurl3nl/6+-+Espacy+-+UFC+Undisputed+3.pkg/file" target="_blank">📥 Parte 6</a>
         </div>
       </div>
-
-      <div class="jogo">
-        <img id="img-shadow" src="shadow_of_the_colossos.jpg" alt="Shadow of the Colossus">
-        <h3>Shadow of the Colossus HD(PT-BR)</h3>
-        <p>Versão PS3 dividida em 2 partes (.pkg)</p>
-        <div class="links-download">
-          <a href="https://www.mediafire.com/file/05paifftwhr77a5/1+-+Espacy+-+Shadow+of+the+Colossus.pkg/file" target="_blank">📥 Parte 1</a>
-          <a href="https://www.mediafire.com/file/49fhg2ugtcqj6z6/2+-+Espacy+-+Shadow+of+the+Colossus.pkg/file" target="_blank">📥 Parte 2</a>
-        </div>
-      </div>
     </section>
 
-    <!-- Coluna PS2 -->
-    <section class="coluna">
+    <!-- Categoria: PS2 -->
+    <section class="categoria" id="categoria-ps2">
       <h2 class="categoria-titulo">PS2</h2>
 
+      <!-- Silent Hill 2 -->
       <div class="jogo">
-        <img id="img-silent-hill-2" src="silent_hill_2.jpg" alt="Silent Hill 2">
+        <img src="silent_hill_2.jpg" alt="Silent Hill 2">
         <h3>Silent Hill 2 (Dublado)</h3>
-        <p>Versão adaptada de PS2 para PS3 (.pkg)</p>
-        <a href="https://datavaults.co/8eh20rbku0yu/Espacy_-_Silent_Hill_2.pkg" target="_blank">
+        <p>Versão PS2 em PKG para PS3</p>
+        <a href="https://datavaults.co/8eh20rbku0yu/Espacy_-_Silent_Hill_2.pkg" target="_blank" rel="noopener noreferrer">
           <button>Baixar PKG</button>
         </a>
       </div>
 
+      <!-- Silent Hill 3 -->
       <div class="jogo">
-        <img id="img-silent-hill-3" src="silent_hill_3.jpg" alt="Silent Hill 3">
-        <h3>Silent Hill 3 (Dublado e Legendado)</h3>
-        <p>Versão adaptada de PS2 para PS3 (.pkg)</p>
-        <a href="https://datavaults.co/cworma3crk7s/Espacy_-_Silent_Hill_3.pkg" target="_blank">
+        <img src="silent_hill_3.jpg" alt="Silent Hill 3">
+        <h3>Silent Hill 3 (Dublado)</h3>
+        <p>Versão PS2 em PKG para PS3</p>
+        <a href="https://datavaults.co/cworma3crk7s/Espacy_-_Silent_Hill_3.pkg" target="_blank" rel="noopener noreferrer">
+          <button>Baixar PKG</button>
+        </a>
+      </div>
+
+      <!-- GTA San Andreas -->
+      <div class="jogo">
+        <img src="gta_san_andreas.jpg" alt="GTA San Andreas">
+        <h3>GTA San Andreas (PT-BR)</h3>
+        <p>Versão PS2 em PKG para PS3</p>
+        <a href="https://www.mediafire.com/file/1dvk96c1nj3077i/Grand+Theft+Auto+San+Andreas+PS3.pkg/file" target="_blank" rel="noopener noreferrer">
           <button>Baixar PKG</button>
         </a>
       </div>
@@ -190,24 +177,7 @@
   </main>
 
   <footer>
-    &copy; 2025 Runi Store BR - Todos os direitos reservados.
+    <p>Obrigado por visitar a Runi Store BR! Se curtir os jogos, compartilhe o site com seus amigos. 💾🇧🇷</p>
   </footer>
-
-  <script>
-    const carregarImagem = (id, lista, i = 0) => {
-      const img = document.getElementById(id);
-      if (!img || i >= lista.length) return;
-      const temp = new Image();
-      temp.onload = () => img.src = lista[i];
-      temp.onerror = () => carregarImagem(id, lista, i + 1);
-      temp.src = lista[i];
-    };
-
-    carregarImagem("img-lego", ["Lego_Star_Wars.jpg", "Lego_Star_Wars.png"]);
-    carregarImagem("img-ufc", ["ufc_cover.jpg", "ufc_cover.png"]);
-    carregarImagem("img-silent-hill-2", ["silent_hill_2.jpg", "silent_hill_2.png"]);
-    carregarImagem("img-silent-hill-3", ["silent_hill_3.jpg", "silent_hill_3.png"]);
-    carregarImagem("img-shadow", ["shadow_of_the_colossos.jpg", "shadow_of_the_colossos.png"]);
-  </script>
 </body>
 </html>
