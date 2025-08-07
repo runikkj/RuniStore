@@ -1,4 +1,5 @@
- <!DOCTYPE html><html lang="pt-BR">
+ <!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -152,6 +153,38 @@
       font-size: 14px;
       color: #ccc;
     }
+
+    /* Media query para telas menores que 768px */
+    @media screen and (max-width: 768px) {
+      .descricao-loja {
+        font-size: 14px;
+        padding: 0 10px;
+      }
+      .busca input {
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+      }
+      .busca button {
+        width: 100%;
+        border-radius: 0 0 8px 8px;
+      }
+      .categoria {
+        padding: 0 10px;
+      }
+      .categoria-titulo {
+        font-size: 20px;
+      }
+      .jogo h3 {
+        font-size: 16px;
+      }
+      .jogo p {
+        font-size: 13px;
+      }
+      .links-download a {
+        padding: 8px 10px;
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -160,21 +193,24 @@
     <a class="discord-link" href="https://discord.gg/8Fd67CPKBD" target="_blank">
       <img src="discord_logo.png" alt="Discord">
     </a>
-  </header>  <div class="descricao-loja">
+  </header>
+  <div class="descricao-loja">
     <p>Bem-vindo à <strong>Runi Store BR</strong>! Aqui você encontra jogos raros, <strong>dublados</strong> e <strong>legendados</strong> em português para PS3, PS2 e PS1. <strong>A maioria dos jogos raros estão em inglês, pois não ganharam tanta atenção para ter uma tradução ou uma dublagem.</strong> Os jogos de PS2 são adaptados no formato <strong>.pkg</strong> para rodar no PS3</p>
-  </div>  <div class="busca">
+  </div>
+  <div class="busca">
     <input type="text" id="campoBusca" placeholder="Buscar jogo...">
     <button onclick="buscar()">🔍</button>
-  </div>  <main>
-  <section class="categoria" id="categoria-ps3">
-  <h2 class="categoria-titulo">Jogos PS3</h2>
-  <p style="text-align: center;">
-    Coleção selecionada com os melhores títulos de PS3, prontos para instalar no seu console.<br><br>
-    A maioria está em <strong>PKG</strong>, compatível com <strong>HEN</strong> e <strong>CFW</strong>, mas também há opções em <strong>pasta</strong> e <strong>ISO</strong>.<br><br>
-    Os jogos estão <strong>dublados</strong>, <strong>legendados</strong> ou ambos. Quando não há versão em português, estão em inglês por falta de tradução.<br><br>
-    E ainda tem <strong>jogos raros</strong>, difíceis de achar, reunidos especialmente para quem quer uma coleção diferenciada.
-  </p>
-</section>
+  </div>
+  <main>
+    <section class="categoria" id="categoria-ps3">
+      <h2 class="categoria-titulo">Jogos PS3</h2>
+      <p style="text-align: center;">
+        Coleção selecionada com os melhores títulos de PS3, prontos para instalar no seu console.<br><br>
+        A maioria está em <strong>PKG</strong>, compatível com <strong>HEN</strong> e <strong>CFW</strong>, mas também há opções em <strong>pasta</strong> e <strong>ISO</strong>.<br><br>
+        Os jogos estão <strong>dublados</strong>, <strong>legendados</strong> ou ambos. Quando não há versão em português, estão em inglês por falta de tradução.<br><br>
+        E ainda tem <strong>jogos raros</strong>, difíceis de achar, reunidos especialmente para quem quer uma coleção diferenciada.
+      </p>
+    </section>
    
    <!-- Assassin’s Creed -->
 <div class="jogo">
