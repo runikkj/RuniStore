@@ -79,33 +79,34 @@
     }
 
     .busca input {
-      padding: 10px;
-      font-size: 16px;
-      width: 80%;
-      border: none;
-      border-radius: 8px 0 0 8px;
-      background-color: #111;
-      color: #fff;
-    }
+  padding: 10px;
+  font-size: 16px;
+  width: 80%;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  background-color: #ffffff;  /* fundo branco */
+  color: #000000;             /* texto preto */
+}
 
-    .busca input::placeholder {
-      color: #888;
-    }
+.busca input::placeholder {
+  color: #888; /* placeholder em cinza */
+}
 
-    .busca button {
-      padding: 10px;
-      font-size: 16px;
-      background-color: #ff0000;
-      color: white;
-      border: none;
-      border-radius: 0 8px 8px 0;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
+.busca button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-    .busca button:hover {
-      background-color: #cc0000;
-      transform: scale(1.05);
+.busca button:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
     }
 
     /* ===== Categoria ===== */
@@ -194,24 +195,18 @@
     </a>
   </header>
 
-<!-- ===== Barra de Busca ===== -->
-<div class="busca">
-  <input type="text" id="campoBusca" placeholder="Buscar jogo..." onkeyup="buscar()">
-  <button onclick="buscar()">🔍</button>
-</div>
-  
-  <div class="descricao-loja">
-    <p>Bem-vindo à <strong class="destaque">Runi Store BR</strong>! Aqui você encontra uma <span class="destaque">seleção exclusiva</span> de jogos para <span class="console">PS3, PS2 e PS1</span>, incluindo títulos <span class="raros">raros</span> e difíceis de achar. Nossa coleção conta com versões em <span class="formatos">PKG, ISO e pastas</span>, prontas para instalar no seu console. Muitos jogos estão <span class="dublagem">dublados</span> ou <span class="dublagem">legendados em português</span>, quando disponíveis. Alguns títulos podem não ter tradução ou dublagem oficial, mas ainda assim fazem parte do nosso acervo para <span class="colecionadores">colecionadores e fãs</span>. Explore, descubra e aproveite a melhor experiência de jogos clássicos com a <strong class="destaque">Runi Store BR</strong>!</p>
-  </div>
-</body>
-</html>
-    </section>
-
-<!-- ===== Categoria PS3 ===== -->
-<main>
-  <section class="categoria" id="categoria-ps3">
+  <!-- ===== Barra de Busca ===== -->  
+  <div class="busca">  
+  <input type="text" id="campoBusca" placeholder="Buscar jogo..." onkeyup="buscar()">  
+  <button onclick="buscar()">🔍</button>  
+</div>  <!-- ===== Descrição da Loja com subtítulo ===== -->  <div class="descricao-loja">  
+  <p>  
+    Bem-vindo à <strong class="destaque">Runi Store BR</strong>! Aqui você encontra uma <span class="destaque">seleção exclusiva</span> de jogos para <span class="console">PS3, PS2 e PS1</span>, incluindo títulos <span class="raros">raros</span> e difíceis de achar. Nossa coleção conta com versões em <span class="formatos">PKG, ISO e pastas</span>, prontas para instalar no seu console. Muitos jogos estão <span class="dublagem">dublados</span> ou <span class="dublagem">legendados em português</span>, quando disponíveis. Alguns títulos podem não ter tradução ou dublagem oficial, mas ainda assim fazem parte do nosso acervo para <span class="colecionadores">colecionadores e fãs</span>. Explore, descubra e aproveite a melhor experiência de jogos clássicos com a <strong class="destaque">Runi Store BR</strong>!  
+  </p>    <!-- Subtítulo -->    <p class="subtitulo-loja"><strong>Jogos de PS3</strong></p>  
+</div>  <!-- ===== Categoria PS3 ===== -->  <main>  
+  <section class="categoria" id="categoria-ps3">  
+    ...lista de jogos...  
   </section>
-</main>
 
    <!-- Assassin’s Creed -->
 <div class="jogo">
