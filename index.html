@@ -12,26 +12,52 @@
   <meta name="robots" content="index, follow">  
   
   <!-- Open Graph -->  
-  <meta property="og:title" content="Runi Store BR - Jogos Dublados e legendados para PS3, PS2 e PS1"/>  
-  <meta property="og:description" content="Baixe jogos dublados e legendados em português para PS3, PS2 e PS1(Adaptados para ps3). Links sem encurtadores, 100% confiáveis!" />  
+  <meta property="og:title" content="Runi Store BR - Jogos Dublados e Legendados para PS3, PS2 e PS1"/>  
+  <meta property="og:description" content="Baixe jogos dublados e legendados em português para PS3, PS2 e PS1 (adaptados para PS3). Links sem encurtadores, 100% confiáveis!" />  
   <meta property="og:image" content="runi-o.jpg"/>  
   <meta property="og:url" content="https://runikkj.github.io/RuniStore/"/>  
   <meta property="og:type" content="website" />  
   <meta name="twitter:card" content="summary_large_image" />  
   
   <style>
-  
-  </head>
-    body 
-/* ===== Corpo ===== */
-body {
+    body {
+      background-color: #000000; /* fundo preto */
+      color: #ffffff; /* texto branco */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: #ff0000; /* links vermelhos */
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header, footer {
+      background-color: #111; /* preto mais claro */
+      color: #ff0000; /* destaque vermelho */
+      padding: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+</body>
+  }
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #000 50%, #1a0000 50%); /* Preto com detalhe vermelho escuro */
+  color: #fff;
+}
   margin: 0;
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #000 50%, #1a0000 50%); /* Preto com detalhe vermelho escuro */
   color: #fff;
 }
 
-/* ===== Cabeçalho ===== */
 header {
   background-color: #1a1a1a;
   padding: 20px;
@@ -50,7 +76,6 @@ header img.logo {
   height: auto;
 }
 
-/* ===== Descrição da loja ===== */
 .descricao-loja {
   max-width: 800px;
   margin: 20px auto;
@@ -74,6 +99,12 @@ header img.logo {
   width: 80%;
   border: none;
   border-radius: 8px 0 0 8px;
+  background-color: #111;   /* fundo preto */
+  color: #fff;              /* texto branco */
+}
+
+.busca input::placeholder {
+  color: #888; /* placeholder em cinza */
 }
 
 .busca button {
@@ -98,13 +129,21 @@ header img.logo {
   max-width: 700px;
 }
 
+/* ===== Card de Jogo ===== */
 .jogo {
-  background-color: #111;
-  border: 1px solid #444;
+  background-color: #111; /* fundo preto suave */
+  border: 1px solid #444; /* borda discreta */
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 30px;
   text-align: center;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2); /* brilho vermelho leve */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.jogo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
 }
 
 .jogo img {
@@ -117,15 +156,16 @@ header img.logo {
 .jogo h3 {
   margin: 10px 0;
   font-size: 18px;
-  color: #ff4b4b;
+  color: #ff4b4b; /* vermelho de destaque */
 }
 
 .jogo p {
   font-size: 14px;
-  color: #ccc;
+  color: #ccc; /* cinza claro pra descrição */
   margin-bottom: 15px;
 }
 
+/* ===== Botões de Download ===== */
 .links-download a {
   display: inline-block;
   margin: 5px;
@@ -135,12 +175,13 @@ header img.logo {
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .links-download a:hover {
   background-color: #cc0000;
   transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
 }
 
 /* ===== Títulos de categoria ===== */
@@ -149,6 +190,8 @@ header img.logo {
   color: #ff4b4b;
   margin-bottom: 20px;
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* ===== Créditos e canais ===== */
@@ -156,6 +199,8 @@ header img.logo {
   max-width: 700px;
   margin: 40px auto;
   text-align: center;
+  color: #aaa;
+  font-size: 14px;
 }
 
 .canal {
@@ -169,15 +214,19 @@ header img.logo {
 .canal img {
   width: 50px;
   border-radius: 50%;
+  border: 2px solid #ff0000; /* destaque vermelho */
 }
 
+/* ===== Links de canais ===== */
 .canal a {
-  color: #00ccff;
+  color: #ff4b4b; /* vermelho de destaque */
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .canal a:hover {
+  color: #ffffff; /* fica branco ao passar o mouse */
   text-decoration: underline;
 }
 
@@ -194,12 +243,13 @@ header img.logo {
   font-size: 14px;
   cursor: pointer;
   z-index: 1000;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #btnTopo:hover {
   background-color: #cc0000;
   transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
 }
 
 /* ===== Rodapé ===== */
@@ -208,62 +258,85 @@ footer {
   padding: 20px;
   font-size: 14px;
   color: #ccc;
+  background-color: #111; /* fundo preto */
+  border-top: 1px solid #333; /* linha discreta */
 }
 
-    /* Media query para telas menores que 768px */
-    @media screen and (max-width: 768px) {
-      .descricao-loja {
-        font-size: 14px;
-        padding: 0 10px;
-      }
-      .busca input {
-        width: 100%;
-        border-radius: 8px 8px 0 0;
-      }
-      .busca button {
-        width: 100%;
-        border-radius: 0 0 8px 8px;
-      }
-      .categoria {
-        padding: 0 10px;
-      }
-      .categoria-titulo {
-        font-size: 20px;
-      }
-      .jogo h3 {
-        font-size: 16px;
-      }
-      .jogo p {
-        font-size: 13px;
-      }
-      .links-download a {
-        padding: 8px 10px;
-        font-size: 14px;
-      }
-    }
+/* ===== Responsividade ===== */
+@media screen and (max-width: 768px) {
+  .descricao-loja {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  .busca input {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+  .busca button {
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+  }
+  .categoria {
+    padding: 0 10px;
+  }
+  .categoria-titulo {
+    font-size: 20px;
+  }
+  .jogo h3 {
+    font-size: 16px;
+  }
+  .jogo p {
+    font-size: 13px;
+  }
+  .links-download a {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}
   </style>
 </head>
 <body>
+  
+  <!-- ===== Cabeçalho ===== -->
   <header>
     <img src="runi.png" alt="Logo Runi Store BR" class="logo">
     <a class="discord-link" href="https://discord.gg/8Fd67CPKBD" target="_blank">
       <img src="discord_logo.png" alt="Discord">
     </a>
   </header>
+
+  <!-- ===== Descrição da Loja ===== -->
   <div class="descricao-loja">
-    <p>Bem-vindo à <strong>Runi Store BR</strong>! Aqui você encontra jogos raros, <strong>dublados</strong> e <strong>legendados</strong> em português para PS3, PS2 e PS1. <strong>A maioria dos jogos raros estão em inglês, pois não ganharam tanta atenção para ter uma tradução ou uma dublagem.</strong> Os jogos de PS2 e PS1 são adaptados no formato <strong>.pkg</strong> para rodar no PS3</p>
+    <p>
+      Bem-vindo à <strong>Runi Store BR</strong>! Aqui você encontra jogos raros, 
+      <strong>dublados</strong> e <strong>legendados</strong> em português para PS3, PS2 e PS1. 
+      <br><br>
+      <strong>A maioria dos jogos raros estão em inglês, pois não ganharam tanta atenção para ter uma tradução ou uma dublagem.</strong> 
+      <br><br>
+      Os jogos de PS2 e PS1 são adaptados no formato <strong>.pkg</strong> para rodar no PS3.
+    </p>
   </div>
+
+  <!-- ===== Barra de Busca ===== -->
   <div class="busca">
     <input type="text" id="campoBusca" placeholder="Buscar jogo...">
     <button onclick="buscar()">🔍</button>
   </div>
+
+  <!-- ===== Categoria PS3 ===== -->
   <main>
     <section class="categoria" id="categoria-ps3">
       <h2 class="categoria-titulo">Jogos PS3</h2>
       <p style="text-align: center;">
-        Coleção selecionada com os melhores títulos de PS3, prontos para instalar no seu console.<br><br> A maioria está em <strong>PKG</strong>, compatível com <strong>HEN</strong> e <strong>CFW</strong>, mas também há opções em <strong>pasta</strong> e <strong>ISO</strong>.<br><br>
-       Os jogos estão <strong>dublados</strong>, <strong>legendados</strong> ou ambos. Quando não há versão em português, estão em inglês por falta de tradução.<br><br> 
-       E ainda tem <strong>jogos raros</strong>, difíceis de achar, reunidos especialmente para quem quer uma coleção diferenciada.</p>
+        Coleção selecionada com os melhores títulos de PS3, prontos para instalar no seu console.
+        <br><br> 
+        A maioria está em <strong>PKG</strong>, compatível com <strong>HEN</strong> e <strong>CFW</strong>, mas também há opções em <strong>pasta</strong> e <strong>ISO</strong>.
+        <br><br>
+        Os jogos estão <strong>dublados</strong>, <strong>legendados</strong> ou ambos. 
+        Quando não há versão em português, estão em inglês por falta de tradução.
+        <br><br> 
+        E ainda tem <strong>jogos raros</strong>, difíceis de achar, reunidos especialmente para quem quer uma coleção diferenciada.
+      </p>
     </section>
    
    <!-- Assassin’s Creed -->
