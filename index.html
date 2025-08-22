@@ -22,147 +22,193 @@
   <style>
   
   </head>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #000 url('bg-textura.jpg') repeat;
-      color: #fff;
-    }
-    header {
-      background-color: #1a1a1a;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header img.logo {
-      width: 150px;
-      height: auto;
-    }
-    .discord-link img {
-      width: 40px;
-      height: auto;
-    }
-    .descricao-loja {
-      max-width: 800px;
-      margin: 20px auto;
-      text-align: center;
-      color: #ccc;
-      font-size: 16px;
-      line-height: 1.5;
-    }
-    .busca {
-      max-width: 400px;
-      margin: 20px auto;
-      display: flex;
-      justify-content: center;
-    }
-    .busca input {
-      padding: 10px;
-      font-size: 16px;
-      width: 80%;
-      border: none;
-      border-radius: 8px 0 0 8px;
-    }
-    .busca button {
-      padding: 10px;
-      font-size: 16px;
-      background-color: #ff0000;
-      color: white;
-      border: none;
-      border-radius: 0 8px 8px 0;
-      cursor: pointer;
-    }
-    .categoria {
-      margin: 40px auto;
-      max-width: 700px;
-    }
-    .jogo {
-      background-color: #111;
-      border: 1px solid #444;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-    .jogo img {
-      width: 120px;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-    .jogo h3 {
-      margin: 10px 0;
-      font-size: 18px;
-      color: #fff;
-    }
-    .jogo p {
-      font-size: 14px;
-      color: #ccc;
-      margin-bottom: 15px;
-    }
-    .links-download a {
-      display: inline-block;
-      margin: 5px;
-      padding: 10px 15px;
-      background-color: #ff0000;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-    .links-download a:hover {
-      background-color: #cc0000;
-    }
-    .categoria-titulo {
-      font-size: 24px;
-      color: #ff4b4b;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .creditos {
-      max-width: 700px;
-      margin: 40px auto;
-      text-align: center;
-    }
-    .canal {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin: 10px 0;
-    }
-    .canal img {
-      width: 50px;
-      border-radius: 50%;
-    }
-    .canal a {
-      color: #00ccff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .canal a:hover {
-      text-decoration: underline;
-    }
-    #btnTopo {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: #ff0000;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 6px;
-      font-size: 14px;
-      cursor: pointer;
-      z-index: 1000;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #ccc;
-    }
+    body 
+/* ===== Corpo ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #000 50%, #1a0000 50%); /* Preto com detalhe vermelho escuro */
+  color: #fff;
+}
+
+/* ===== Cabeçalho ===== */
+header {
+  background-color: #1a1a1a;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img.logo {
+  width: 150px;
+  height: auto;
+}
+
+.discord-link img {
+  width: 40px;
+  height: auto;
+}
+
+/* ===== Descrição da loja ===== */
+.descricao-loja {
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+  color: #ccc;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* ===== Busca ===== */
+.busca {
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.busca input {
+  padding: 10px;
+  font-size: 16px;
+  width: 80%;
+  border: none;
+  border-radius: 8px 0 0 8px;
+}
+
+.busca button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.busca button:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+/* ===== Categorias e Jogos ===== */
+.categoria {
+  margin: 40px auto;
+  max-width: 700px;
+}
+
+.jogo {
+  background-color: #111;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.jogo img {
+  width: 120px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.jogo h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #ff4b4b;
+}
+
+.jogo p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.links-download a {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  background-color: #ff0000;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.links-download a:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+/* ===== Títulos de categoria ===== */
+.categoria-titulo {
+  font-size: 24px;
+  color: #ff4b4b;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ===== Créditos e canais ===== */
+.creditos {
+  max-width: 700px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.canal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.canal img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.canal a {
+  color: #00ccff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.canal a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Botão voltar ao topo ===== */
+#btnTopo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ff0000;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#btnTopo:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+/* ===== Rodapé ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
 
     /* Media query para telas menores que 768px */
     @media screen and (max-width: 768px) {
