@@ -1,123 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Runi Store BR - Jogos PS3, PS2 e PS1</title>
-  <meta name="description" content="Runi Store BR - Baixe jogos dublados e legendados em português para PS3, PS2 e PS1, adaptados para PS3. Links 100% confiáveis.">
-  <meta name="robots" content="index, follow">
-
+  <meta charset="UTF-8">
+  <title>Runi Store BR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #000; /* gradiente removido */
+      background: #000;
       color: #fff;
       margin: 0;
       padding: 0;
-    }
-
-    a {
-      color: #ff0000;
-      text-decoration: none;
-    }
-
-    header, footer {
-      background-color: #111;
-      color: #ff0000;
-      padding: 10px;
       text-align: center;
     }
 
+    header, footer {
+      background: #111;
+      color: #ff0000;
+      padding: 10px;
+    }
+
     header img.logo {
-      width: 150px;
+      max-width: 180px;
       height: auto;
     }
 
     .discord-link img {
       width: 40px;
       height: auto;
-    }
-
-    .descricao-loja {
-      max-width: 800px;
-      margin: 15px auto;
-      text-align: center;
-      font-size: 14px;
-      line-height: 1.4;
+      vertical-align: middle;
     }
 
     .busca {
-      max-width: 400px;
-      margin: 15px auto;
-      text-align: center;
+      margin: 15px;
     }
 
     .busca input {
       padding: 8px;
       font-size: 14px;
       width: 70%;
+      max-width: 300px;
       border: 1px solid #555;
-      background-color: #fff;
-      color: #000;
     }
 
     .busca button {
-      padding: 8px;
+      padding: 8px 12px;
       font-size: 14px;
-      background-color: #ff0000;
-      color: white;
+      background: #ff0000;
+      color: #fff;
       border: none;
+      cursor: pointer;
     }
 
-    .categoria {
-      margin: 20px auto;
-      max-width: 700px;
-    }
-
-    .categoria-titulo {
-      font-size: 20px;
-      color: #ff4b4b;
-      margin-bottom: 15px;
-      text-align: center;
+    .descricao-loja {
+      max-width: 900px;
+      margin: 15px auto;
+      padding: 10px;
+      font-size: 15px;
+      line-height: 1.5;
     }
 
     .jogo {
-      background-color: #111;
-      border: 1px solid #444;
+      background: #111;
+      border: 1px solid #333;
       padding: 15px;
-      margin-bottom: 20px;
+      margin: 10px;
+      display: inline-block;
+      width: 220px;
+      vertical-align: top;
       text-align: center;
     }
 
     .jogo img {
-      width: 120px;
+      width: 140px;
       height: auto;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .jogo h3 {
       font-size: 16px;
-      color: #fff;
+      margin: 5px 0;
     }
 
     .jogo p {
       font-size: 13px;
-      color: #fff;
+      color: #ddd;
     }
 
     .links-download a {
       display: block;
       margin: 5px auto;
       padding: 8px;
-      background-color: #ff0000;
+      background: #ff0000;
       color: white;
       text-decoration: none;
       font-weight: bold;
-      width: 200px;
+      border-radius: 4px;
+      max-width: 180px;
     }
 
     footer {
       font-size: 12px;
-      color: #ccc;
+      color: #aaa;
       border-top: 1px solid #333;
     }
   </style>
@@ -132,7 +116,7 @@
 
   <!-- Barra de Busca -->
   <div class="busca">
-    <input type="text" id="campoBusca" placeholder="Buscar jogo...">
+    <input type="text" placeholder="Buscar jogo...">
     <button>🔍</button>
   </div>
 
@@ -140,12 +124,12 @@
   <div class="descricao-loja">
     <p>
       Bem-vindo à <strong>Runi Store BR</strong>! Aqui você encontra jogos para
-      <strong>PS3, PS2 e PS1</strong> em formatos <strong>PKG, ISO e pastas</strong>.
+      <strong>PS3, PS2 e PS1</strong> nos formatos <strong>PKG, ISO e Pasta</strong>.<br>
       Muitos estão <strong>dublados</strong> ou <strong>legendados em português</strong>.
     </p>
   </div>
 
-  <!-- Categoria exemplo -->
+  <!-- Categoria -->
   <section class="categoria" id="PS3">
     <h2 class="categoria-titulo">Jogos PS3</h2>
   </section>
