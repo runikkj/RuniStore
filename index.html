@@ -2,32 +2,17 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="qIoQj8AoClhNrtOFp4JisJsLot1KKtnIOA7oSu1tghY" />
   <title>Runi Store BR - Jogos PS3, PS2 e PS1</title>
   <meta name="description" content="Runi Store BR - Baixe jogos dublados e legendados em português para PS3, PS2 e PS1, adaptados para PS3. Links 100% confiáveis.">
   <meta name="robots" content="index, follow">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Runi Store BR - Jogos Dublados e Legendados para PS3, PS2 e PS1"/>
-  <meta property="og:description" content="Baixe jogos dublados e legendados em português para PS3, PS2 e PS1 (adaptados para PS3). Links sem encurtadores, 100% confiáveis!" />
-  <meta property="og:image" content="runi-o.jpg"/>
-  <meta property="og:url" content="https://runikkj.github.io/RuniStore/"/>
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-
   <style>
-    /* ===== Reset básico ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #000 50%, #1a0000 50%);
+      background-color: #000; /* gradiente removido */
       color: #fff;
+      margin: 0;
+      padding: 0;
     }
 
     a {
@@ -35,21 +20,11 @@
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
     header, footer {
       background-color: #111;
       color: #ff0000;
-      padding: 15px;
+      padding: 10px;
       text-align: center;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
     }
 
     header img.logo {
@@ -64,125 +39,85 @@
 
     .descricao-loja {
       max-width: 800px;
-      margin: 20px auto;
+      margin: 15px auto;
       text-align: center;
-      color: #fff;
-      font-size: 16px;
-      line-height: 1.5;
+      font-size: 14px;
+      line-height: 1.4;
     }
 
     .busca {
       max-width: 400px;
-      margin: 20px auto;
-      display: flex;
-      justify-content: center;
+      margin: 15px auto;
+      text-align: center;
     }
 
     .busca input {
-  padding: 10px;
-  font-size: 16px;
-  width: 80%;
-  border: none;
-  border-radius: 8px 0 0 8px;
-  background-color: #ffffff;  /* fundo branco */
-  color: #000000;             /* texto preto */
-}
-
-.busca input::placeholder {
-  color: #888; /* placeholder em cinza */
-}
-
-.busca button {
-  padding: 10px;
-  font-size: 16px;
-  background-color: #ff0000;
-  color: white;
-  border: none;
-  border-radius: 0 8px 8px 0;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.busca button:hover {
-  background-color: #cc0000;
-  transform: scale(1.05);
-}
+      padding: 8px;
+      font-size: 14px;
+      width: 70%;
+      border: 1px solid #555;
+      background-color: #fff;
+      color: #000;
     }
 
-    /* ===== Categoria ===== */
+    .busca button {
+      padding: 8px;
+      font-size: 14px;
+      background-color: #ff0000;
+      color: white;
+      border: none;
+    }
+
     .categoria {
-      margin: 40px auto;
+      margin: 20px auto;
       max-width: 700px;
     }
 
     .categoria-titulo {
-      font-size: 24px;
+      font-size: 20px;
       color: #ff4b4b;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 1px;
     }
 
     .jogo {
       background-color: #111;
       border: 1px solid #444;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 30px;
+      padding: 15px;
+      margin-bottom: 20px;
       text-align: center;
-      box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .jogo:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
     }
 
     .jogo img {
       width: 120px;
       height: auto;
-      border-radius: 10px;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     .jogo h3 {
-      margin: 10px 0;
-      font-size: 18px;
+      font-size: 16px;
       color: #fff;
     }
 
     .jogo p {
-      font-size: 14px;
+      font-size: 13px;
       color: #fff;
-      margin-bottom: 15px;
     }
 
     .links-download a {
-      display: inline-block;
-      margin: 5px;
-      padding: 10px 15px;
+      display: block;
+      margin: 5px auto;
+      padding: 8px;
       background-color: #ff0000;
       color: white;
       text-decoration: none;
-      border-radius: 6px;
       font-weight: bold;
-      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .links-download a:hover {
-      background-color: #cc0000;
-      transform: scale(1.05);
-      box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+      width: 200px;
     }
 
     footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
+      font-size: 12px;
       color: #ccc;
-      background-color: #111;
       border-top: 1px solid #333;
     }
   </style>
@@ -190,25 +125,30 @@
 <body>
   <header>
     <img src="runi.png" alt="Logo Runi Store BR" class="logo">
-    <a class="discord-link" href="https://discord.gg/8Fd67CPKBD" target="_blank">
+    <a class="discord-link" href="https://discord.gg/8Fd67CPKBD">
       <img src="discord_logo.png" alt="Discord">
     </a>
   </header>
 
-  <!-- ===== Barra de Busca ===== -->  
-  <div class="busca">  
-  <input type="text" id="campoBusca" placeholder="Buscar jogo..." onkeyup="buscar()">  
-  <button onclick="buscar()">🔍</button>  
-</div>  <!-- ===== Descrição da Loja com subtítulo ===== -->  <div class="descricao-loja">  
-  <p>  
-    Bem-vindo à <strong class="destaque">Runi Store BR</strong>! Aqui você encontra uma <span class="destaque">seleção exclusiva</span> de jogos para <span class="console">PS3, PS2 e PS1</span>, incluindo títulos <span class="raros">raros</span> e difíceis de achar. Nossa coleção conta com versões em <span class="formatos">PKG, ISO e pastas</span>, prontas para instalar no seu console. Muitos jogos estão <span class="dublagem">dublados</span> ou <span class="dublagem">legendados em português</span>, quando disponíveis. Alguns títulos podem não ter tradução ou dublagem oficial, mas ainda assim fazem parte do nosso acervo para <span class="colecionadores">colecionadores e fãs</span>. Explore, descubra e aproveite a melhor experiência de jogos clássicos com a <strong class="destaque">Runi Store BR</strong>!  
-  </p>    
-  
-<!-- Jogos PS3 -->
-<section class="categoria" id="PS3">
-  <h2 class="categoria-titulo">Jogos PS3</h2>
-  <p style="text-align: center;">Descubra nossa coleção de <strong>jogos de PS3</strong>, incluindo títulos raros, clássicos e modernos. Todos os jogos estão disponíveis em <strong>PKG, ISO e pastas</strong>, prontos para instalar no seu console. Muitos estão <strong>dublados</strong> ou <strong>legendados em português</strong>, garantindo a melhor experiência para jogadores e colecionadores.</p>
-</section>
+  <!-- Barra de Busca -->
+  <div class="busca">
+    <input type="text" id="campoBusca" placeholder="Buscar jogo...">
+    <button>🔍</button>
+  </div>
+
+  <!-- Descrição -->
+  <div class="descricao-loja">
+    <p>
+      Bem-vindo à <strong>Runi Store BR</strong>! Aqui você encontra jogos para
+      <strong>PS3, PS2 e PS1</strong> em formatos <strong>PKG, ISO e pastas</strong>.
+      Muitos estão <strong>dublados</strong> ou <strong>legendados em português</strong>.
+    </p>
+  </div>
+
+  <!-- Categoria exemplo -->
+  <section class="categoria" id="PS3">
+    <h2 class="categoria-titulo">Jogos PS3</h2>
+  </section>
 
    <!-- Assassin’s Creed -->
 <div class="jogo">
