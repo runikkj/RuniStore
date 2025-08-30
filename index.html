@@ -60,20 +60,28 @@
       line-height: 1.5;
     }
 
-    /* Container dos jogos usando Flexbox */
-    .jogos-container {
+    /* Categoria */
+    .categoria {
       display: flex;
-      flex-direction: column; /* organiza em coluna */
+      flex-direction: column; /* organiza título e jogos em coluna */
       align-items: center;    /* centraliza horizontalmente */
-      margin: 10px;
+      margin: 20px auto;
+      text-align: center;
     }
 
+    .categoria-titulo {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    /* Jogos */
     .jogo {
       background: #111;
       border: 1px solid #333;
       padding: 15px;
       margin: 10px 0;  /* espaço entre os jogos */
       width: 220px;
+      max-width: 90%;
       text-align: center;
     }
 
@@ -93,16 +101,17 @@
       color: #ddd;
     }
 
-    .links-download a {
+    .links-download a.btn-download {
       display: block;
       margin: 5px auto;
       padding: 8px;
       background: #ff0000;
-      color: white;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
       border-radius: 4px;
       max-width: 180px;
+      text-align: center;
     }
 
     footer {
@@ -155,26 +164,25 @@
       Muitos estão <strong>dublados</strong> ou <strong>legendados em português</strong>.
     </p>
   </div>
-  
-  <!-- Botão Voltar ao Topo -->
-  <button id="topo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">⬆ Voltar ao Topo</button>
-</div>
-  
-  <!-- Categoria -->
+
+  <!-- Categoria PS3 -->
   <section class="categoria" id="PS3">
     <h2 class="categoria-titulo">Jogos PS3</h2>
-  </section>
 
-   <!-- Assassin’s Creed -->
-<div class="jogo">
-  <img src="ac1.jpg" alt="Assassin's Creed" />
-  <h3>Assassin’s Creed (Inglês)</h3>
-  <p>Versão em PKG completa.</p>
-  <div class="links-download">
-    <a href="https://www.mediafire.com/folder/6htut02ab3yhe/Assassin's+Creed+[NPEB00393]-[Gutamps+Official]" class="btn-download">PKG Completo</a>
-  </div>
-</div>
+    <!-- Assassin’s Creed -->
+    <div class="jogo">
+      <img src="ac1.jpg" alt="Assassin's Creed" />
+      <h3>Assassin’s Creed (Inglês)</h3>
+      <p>Versão em PKG completa.</p>
+      <div class="links-download">
+        <a href="https://www.mediafire.com/folder/6htut02ab3yhe/Assassin's+Creed+[NPEB00393]-[Gutamps+Official]" class="btn-download">PKG Completo</a>
+      </div>
+    </div>
 
+  <!-- Botão Voltar ao Topo -->
+  <button id="topo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">⬆ Voltar ao Topo</button>
+</section>
+    
 <!-- Assassin’s Creed II -->
 <div class="jogo">
   <img src="ac2.jpg" alt="Assassin's Creed II" />
