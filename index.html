@@ -2675,36 +2675,40 @@
  </div>
   
 </section>
-      </div></section>
-  </main>  <div class="creditos">
-    <h3>Agradecimentos especiais aos criadores dos PKG:</h3>
-    <div class="canal">
-      <img src="pedrost.jpg" alt="Pedrost">
-      <a href="https://youtube.com/@pedrost23?si=XjQFKeVL8REFe5Kg" target="_blank">@pedrost23</a>
-    </div>
-    <div class="canal">
-      <img src="espacy.jpg" alt="Espacy">
-      <a href="https://youtube.com/@espacy.?si=Pf6jOSQltva6hw42" target="_blank">@espacy</a>
-    </div>
-  </div>  <footer>
-    <p style="margin-top: 20px; color: #ccc; font-size: 14px;">
-      Parte dos arquivos disponibilizados nesta loja vêm diretamente de canais incríveis como os citados acima. A intenção é ajudar a comunidade, e não ganhar em cima de ninguém.
-    </p>
-    <p>Obrigado por visitar a Runi Store BR! Se curtir os jogos, compartilhe o site com seus amigos.</p>
-  </footer><button id="btnTopo" onclick="voltarAoTopo()">⬆ Voltar ao topo</button>
+      </main>
 
-  <script>
-    function buscar() {
-      const termo = document.getElementById("campoBusca").value.toLowerCase();
-      const jogos = document.querySelectorAll(".jogo");
-      jogos.forEach(jogo => {
-        const titulo = jogo.querySelector("h3").textContent.toLowerCase();
-        jogo.style.display = titulo.includes(termo) ? "block" : "none";
-      });
-    }
+<div class="creditos">
+  <h3>Agradecimentos especiais aos criadores dos PKG:</h3>
+  <div class="canal">
+    <img src="pedrost.jpg" alt="Pedrost">
+    <a href="https://youtube.com/@pedrost23?si=XjQFKeVL8REFe5Kg" target="_blank">@pedrost23</a>
+  </div>
+  <div class="canal">
+    <img src="espacy.jpg" alt="Espacy">
+    <a href="https://youtube.com/@espacy.?si=Pf6jOSQltva6hw42" target="_blank">@espacy</a>
+  </div>
+</div>
 
-    function voltarAoTopo() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script></body>
+<footer>
+  <p style="margin-top: 20px; color: #ccc; font-size: 14px;">
+    Parte dos arquivos disponibilizados nesta loja vêm diretamente de canais incríveis como os citados acima. 
+    A intenção é ajudar a comunidade, e não ganhar em cima de ninguém.
+  </p>
+  <p>
+    Obrigado por visitar a Runi Store BR! Se curtir os jogos, compartilhe o site com seus amigos.
+  </p>
+</footer>
+
+<script>
+  function buscar() {
+    const termo = document.getElementById("campoBusca").value.toLowerCase();
+    const jogos = document.querySelectorAll(".jogo");
+    jogos.forEach(jogo => {
+      const titulo = jogo.querySelector("h3").textContent.toLowerCase();
+      jogo.style.display = titulo.includes(termo) ? "block" : "none";
+    });
+  }
+</script>
+
+</body>
 </html>
