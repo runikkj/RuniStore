@@ -1,121 +1,114 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Runi Store BR</title>
-    <style>
-        /* ESTILO INLINE PARA COMPATIBILIDADE COM O NAVEGADOR DO PS3 */body {
-        margin: 0;
-        background: #000000;
-        color: #fff;
+<meta charset="UTF-8">
+<title>Runi Store BR - Natal</title>
+<style>
+    body {
+        background: #000;
+        color: white;
         font-family: Arial, sans-serif;
-    }
-
-    header {
+        margin: 0;
+        padding: 0;
         text-align: center;
-        padding: 20px 0;
-        background: #b30000;
-        border-bottom: 3px solid #ffffff;
     }
 
-    .logo {
+    /* Logo */
+    #logo {
         width: 180px;
-        margin-bottom: 10px;
+        margin: 20px auto 10px auto;
+        display: block;
     }
 
-    nav a {
-        color: #fff;
+    /* Tema natalino */
+    .natal {
+        color: #ff3b3b;
+        font-weight: bold;
+        text-shadow: 0px 0px 10px #ff0000;
+    }
+
+    /* Menu */
+    .menu {
+        margin-top: 10px;
+        padding: 10px 0;
+        background: #111;
+        border-top: 1px solid #222;
+        border-bottom: 1px solid #222;
+    }
+
+    .menu a {
+        color: white;
+        margin: 0 15px;
         text-decoration: none;
-        margin: 0 10px;
+        font-weight: bold;
         font-size: 18px;
     }
 
-    .luzes {
-        width: 100%;
-        text-align: center;
-        font-size: 22px;
-        margin: 10px 0;
+    /* Títulos */
+    h2 {
+        margin-top: 40px;
+        color: #ff3b3b;
     }
 
-    .lista-jogos {
-        padding: 20px;
-    }
-
+    /* Cards dos jogos */
     .jogo {
         background: #111;
-        border: 2px solid #b30000;
-        padding: 10px;
-        margin-bottom: 20px;
-    }
-
-    .jogo img {
-        width: 100%;
-        border: 2px solid #fff;
-    }
-
-    footer {
-        text-align: center;
+        border: 1px solid #333;
         padding: 15px;
-        background: #b30000;
-        border-top: 3px solid #ffffff;
-        margin-top: 20px;
+        margin: 15px auto;
+        width: 90%;
+        max-width: 500px;
+        border-radius: 10px;
     }
 
-    /* EFEITO DE NEVE SIMPLES PARA O PS3 */
-    .snowflake {
-        position: fixed;
-        top: -10px;
-        color: white;
-        font-size: 18px;
-        user-select: none;
-        pointer-events: none;
+    .jogo a {
+        color: #4aa3ff;
+        font-weight: bold;
+        text-decoration: none;
     }
 </style>
-
 </head>
-<body><header>
-    <img src="assets/img/logo-natal.png" class="logo" alt="Runi Store BR">
-    <div class="luzes">⭐🎄⭐🎅⭐🎄⭐</div>
-    <nav>
-        <a href="#">Início</a>
-        <a href="#">Jogos PS3</a>
-        <a href="#">Contato</a>
-    </nav>
-</header>
+<body>
 
-<main>
+<!-- Logo -->
+<img id="logo" src="runi.png" alt="Runi Store Logo">
 
-<footer>
-    © 2025 Runi Store BR — Tema de Natal
-</footer>
+<h1 class="natal">🎄 Runi Store BR – Especial de Natal 🎅</h1>
 
-<script>
-    // NEVE COMPATÍVEL COM O PS3
-    function criarNeve() {
-        var neve = document.createElement('div');
-        neve.className = 'snowflake';
-        neve.innerHTML = '❄';
-        neve.style.left = Math.random() * window.innerWidth + 'px';
-        neve.style.opacity = Math.random();
-        neve.style.fontSize = (Math.random() * 10 + 10) + 'px';
+<!-- Menu -->
+<div class="menu">
+    <a href="#ps3">Jogos PS3</a>
+    <a href="#ps2">Jogos PS2</a>
+    <a href="#ps1">Jogos PS1</a>
+</div>
 
-        document.body.appendChild(neve);
+<!-- PS3 -->
+<h2 id="ps3">Jogos de PS3</h2>
 
-        var queda = 0;
-        var velocidade = 1 + Math.random() * 2;
+<div class="jogo">
+    <h3>Assassin’s Creed</h3>
+    <p><a href="https://www.mediafire.com/folder/6htut02ab3yhe/Assassin's+Creed+[NPEB00393]-[Gutamps+Official]" target="_blank">Download do Jogo</a></p>
+</div>
 
-        var intervalo = setInterval(function() {
-            queda += velocidade;
-            neve.style.top = queda + 'px';
+<div class="jogo">
+    <h3>Batman Begins</h3>
+    <p><a href="https://www.mediafire.com/file/szwjy8de5n873rm/Batman+Begins+PS3.pkg/file" target="_blank">Download do Jogo</a></p>
+</div>
 
-            if (queda > window.innerHeight) {
-                clearInterval(intervalo);
-                document.body.removeChild(neve);
-            }
-        }, 50);
-    }
+<!-- PS2 -->
+<h2 id="ps2">Jogos de PS2 (PKG para PS3)</h2>
 
-    setInterval(criarNeve, 200);
-</script>
+<p style="opacity:0.6;">Nenhum jogo listado ainda.</p>
+
+<!-- PS1 -->
+<h2 id="ps1">Jogos de PS1 (PKG para PS3)</h2>
+
+<div class="jogo">
+    <h3>Crash Bandicoot</h3>
+    <p><a href="https://www.mediafire.com/file/zs8ah6t1hs3q8cd/Runi_Store_-_Crash_Bandicoot_PS3.pkg/file" target="_blank">Download do Jogo</a></p>
+</div>
+
+<br><br>
 
 </body>
 </html>
