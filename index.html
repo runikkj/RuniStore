@@ -1,83 +1,84 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Runi Store BR - Natal</title>
+<title>Runi Store BR</title>
+
 <style>
     body {
-        background: #000;
+        background: #0a0a0a;
         color: white;
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
+    }
+
+    /* Neve SUPER leve (compatível com PS3) */
+    .snow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="5" height="5"><circle cx="2" cy="2" r="2" fill="white"/></svg>');
+        animation: snow 8s linear infinite;
+        opacity: 0.7;
+    }
+
+    @keyframes snow {
+        0% { background-position: 0 0; }
+        100% { background-position: 0 800px; }
+    }
+
+    .header {
         text-align: center;
+        padding: 20px;
     }
 
-    /* Logo */
-    #logo {
-        width: 180px;
-        margin: 20px auto 10px auto;
-        display: block;
-    }
-
-    /* Tema natalino */
-    .natal {
-        color: #ff3b3b;
-        font-weight: bold;
-        text-shadow: 0px 0px 10px #ff0000;
-    }
-
-    /* Menu */
-    .menu {
-        margin-top: 10px;
-        padding: 10px 0;
-        background: #111;
-        border-top: 1px solid #222;
-        border-bottom: 1px solid #222;
-    }
-
-    .menu a {
-        color: white;
-        margin: 0 15px;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 18px;
-    }
-
-    /* Títulos */
-    h2 {
-        margin-top: 40px;
-        color: #ff3b3b;
-    }
-
-    /* Cards dos jogos */
-    .jogo {
-        background: #111;
-        border: 1px solid #333;
-        padding: 15px;
-        margin: 15px auto;
-        width: 90%;
-        max-width: 500px;
+    .logo {
+        width: 140px;
         border-radius: 10px;
     }
 
-    .jogo a {
+    .jogo {
+        background: #111;
+        padding: 15px;
+        margin: 15px;
+        border-radius: 10px;
+        border: 1px solid #333;
+    }
+
+    .jogo img {
+        width: 180px;
+        border-radius: 10px;
+    }
+
+    .titulo {
+        font-size: 22px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #ff3b3b;
+    }
+
+    a {
         color: #4aa3ff;
         font-weight: bold;
-        text-decoration: none;
     }
+
 </style>
 </head>
+
 <body>
 
-<!-- Logo -->
-<img id="logo" src="runi.png" alt="Runi Store Logo">
+<div class="snow"></div>
 
-<h1 class="natal">Runi Store BR 🎄</h1>
-
+<div class="header">
+    <img class="logo" src="runi.png" alt="Runi Store BR">
+    <h1>Runi Store BR — Especial de Natal</h1>
 </div>
-    
-<!-- PS3 -->
+
+
 <h2 id="ps3">Jogos de PS3</h2>
 <div class="game">
     <img src="ac1.jpg" alt="Assassin's Creed">
