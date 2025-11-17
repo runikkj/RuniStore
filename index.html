@@ -6,29 +6,36 @@
 
 <style>
     body {
-        background: #0a0a0a;
-        color: white;
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
+  <style>
+.floco {
+    position: fixed;
+    top: -10px;
+    color: white;
+    font-size: 14px;
+    animation: cair linear infinite;
+    pointer-events: none;
+}
 
-    /* Neve SUPER leve (compatível com PS3) */
-    .snow {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="5" height="5"><circle cx="2" cy="2" r="2" fill="white"/></svg>');
-        animation: snow 8s linear infinite;
-        opacity: 0.7;
-    }
+@keyframes cair {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0.3; }
+}
+</style>
 
-    @keyframes snow {
-        0% { background-position: 0 0; }
-        100% { background-position: 0 800px; }
+<script>
+var total = 25; // quantidade de flocos (leve para PS3)
+
+for (var i = 0; i < total; i++) {
+    var f = document.createElement("div");
+    f.className = "floco";
+    f.innerHTML = "❄";
+    f.style.left = Math.random() * 100 + "vw";
+    f.style.animationDuration = (5 + Math.random() * 5) + "s";
+    f.style.fontSize = (10 + Math.random() * 10) + "px";
+    document.body.appendChild(f);
+}
+
+</script>
     }
 
     .header {
