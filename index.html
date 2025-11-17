@@ -1,30 +1,95 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Runi Store BR</title>
+<title>Runi Store BR - Especial de Natal</title>
 
 <style>
     body {
-  <style>
-.floco {
-    position: fixed;
-    top: -10px;
-    color: white;
-    font-size: 14px;
-    animation: cair linear infinite;
-    pointer-events: none;
-}
+        background: #000;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
 
-@keyframes cair {
-    0% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(100vh); opacity: 0.3; }
-}
+    /* Logo */
+    #logo {
+        width: 160px;
+        margin: 25px auto 10px auto;
+        border-radius: 10px;
+    }
+
+    h1 {
+        color: #ff3b3b;
+        text-shadow: 0 0 10px red;
+        margin-top: 10px;
+    }
+
+    /* Títulos das categorias */
+    h2 {
+        margin-top: 40px;
+        color: #ff3b3b;
+        text-shadow: 0 0 8px red;
+    }
+
+    /* Estrutura dos jogos */
+    .game {
+        background: #111;
+        border: 1px solid #333;
+        padding: 15px;
+        margin: 20px auto;
+        width: 90%;
+        max-width: 500px;
+        border-radius: 10px;
+    }
+
+    .game img {
+        width: 110px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .game h3 {
+        margin: 10px 0 5px 0;
+        font-size: 20px;
+        color: #ff3b3b;
+    }
+
+    .game p {
+        margin: 5px 0 10px 0;
+    }
+
+    .download {
+        color: #4aa3ff;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    /* Neve para PS3 */
+    .floco {
+        position: fixed;
+        top: -10px;
+        color: white;
+        font-size: 14px;
+        animation: cair linear infinite;
+        pointer-events: none;
+    }
+
+    @keyframes cair {
+        0% { transform: translateY(0); opacity: 1; }
+        100% { transform: translateY(100vh); opacity: 0.3; }
+    }
 </style>
 
-<script>
-var total = 25; // quantidade de flocos (leve para PS3)
+</head>
+<body>
 
+<!-- Neve compatível com PS3 -->
+<script>
+var total = 25;
 for (var i = 0; i < total; i++) {
     var f = document.createElement("div");
     f.className = "floco";
@@ -34,59 +99,17 @@ for (var i = 0; i < total; i++) {
     f.style.fontSize = (10 + Math.random() * 10) + "px";
     document.body.appendChild(f);
 }
-
 </script>
-    }
 
-    .header {
-        text-align: center;
-        padding: 20px;
-    }
+<!-- LOGO -->
+<img id="logo" src="logo.png" alt="Runi Store BR">
 
-    .logo {
-        width: 140px;
-        border-radius: 10px;
-    }
-
-    .jogo {
-        background: #111;
-        padding: 15px;
-        margin: 15px;
-        border-radius: 10px;
-        border: 1px solid #333;
-    }
-
-    .jogo img {
-        width: 110px;
-        border-radius: 10px;
-    }
-
-    .titulo {
-        font-size: 22px;
-        margin-bottom: 10px;
-        font-weight: bold;
-        color: #ff3b3b;
-    }
-
-    a {
-        color: #4aa3ff;
-        font-weight: bold;
-    }
-
-</style>
-</head>
-
-<body>
-
-<div class="snow"></div>
-
-<div class="header">
-    <img class="logo" src="runi.png" alt="Runi Store BR">
-    <h1>Runi Store BR — Especial de Natal</h1>
-</div>
+<h1>🎄 Runi Store BR — Especial de Natal 🎁</h1>
 
 
+<!-- ======================= PS3 ======================= -->
 <h2 id="ps3">Jogos de PS3</h2>
+
 <div class="game">
     <img src="ac1.jpg" alt="Assassin's Creed">
     <h3>Assassin's Creed</h3>
@@ -94,7 +117,10 @@ for (var i = 0; i < total; i++) {
     <a class="download" href="https://www.mediafire.com/folder/6htut02ab3yhe/Assassin's+Creed+[NPEB00393]-[Gutamps+Official]">Download</a>
 </div>
 
+
+<!-- ======================= PS2 ======================= -->
 <h2 id="ps2">Jogos de PS2 (PKG)</h2>
+
 <div class="game">
     <img src="batmanbegins.jpg" alt="Batman Begins">
     <h3>Batman Begins</h3>
@@ -102,13 +128,17 @@ for (var i = 0; i < total; i++) {
     <a class="download" href="https://www.mediafire.com/file/szwjy8de5n873rm/Batman+Begins+PS3.pkg/file">Download</a>
 </div>
 
+
+<!-- ======================= PS1 ======================= -->
 <h2 id="ps1">Jogos de PS1 (PKG)</h2>
+
 <div class="game">
     <img src="crashbandicoot.jpg" alt="Crash Bandicoot">
     <h3>Crash Bandicoot</h3>
     <p>O clássico original convertido em PKG para PS3.</p>
     <a class="download" href="https://www.mediafire.com/file/zs8ah6t1hs3q8cd/Runi_Store_-_Crash_Bandicoot_PS3.pkg/file">Download</a>
 </div>
+
 
 </body>
 </html>
