@@ -3,9 +3,9 @@
     <meta charset="UTF-8">
     <title>Runi Store BR</title>
     <style>
-      /body {
+        /* ESTILO INLINE PARA COMPATIBILIDADE COM O NAVEGADOR DO PS3 */body {
         margin: 0;
-        background: #0a0a0a;
+        background: #000000;
         color: #fff;
         font-family: Arial, sans-serif;
     }
@@ -81,3 +81,49 @@
         <a href="#">Contato</a>
     </nav>
 </header>
+
+<main>
+    <section class="lista-jogos">
+        <div class="jogo">
+            <h2>Exemplo de Jogo</h2>
+            <img src="assets/img/exemplo.jpg" alt="Jogo">
+            <p>Descrição do jogo aqui.</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    © 2025 Runi Store BR — Tema de Natal
+</footer>
+
+<script>
+    // NEVE COMPATÍVEL COM O PS3
+    function criarNeve() {
+        var neve = document.createElement('div');
+        neve.className = 'snowflake';
+        neve.innerHTML = '❄';
+        neve.style.left = Math.random() * window.innerWidth + 'px';
+        neve.style.opacity = Math.random();
+        neve.style.fontSize = (Math.random() * 10 + 10) + 'px';
+
+        document.body.appendChild(neve);
+
+        var queda = 0;
+        var velocidade = 1 + Math.random() * 2;
+
+        var intervalo = setInterval(function() {
+            queda += velocidade;
+            neve.style.top = queda + 'px';
+
+            if (queda > window.innerHeight) {
+                clearInterval(intervalo);
+                document.body.removeChild(neve);
+            }
+        }, 50);
+    }
+
+    setInterval(criarNeve, 200);
+</script>
+
+</body>
+</html>
