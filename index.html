@@ -6,285 +6,187 @@
 
 <style>
 body {
-    background: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 h1 {
-    margin: 20px 0 10px 0;
+  margin: 20px 0;
 }
 
 h2 {
-    margin-top: 40px;
-    color: red;
-    border-bottom: 1px solid #333;
-    padding-bottom: 5px;
+  margin-top: 40px;
+  color: red;
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
 }
 
-#menu a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
+.jogo {
+  background: #111;
+  border: 1px solid #333;
+  padding: 15px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 520px;
+  border-radius: 10px;
 }
 
-#search {
-    width: 90%;
-    max-width: 420px;
-    padding: 10px;
-    font-size: 16px;
-    margin: 20px auto;
+.jogo img {
+  width: 120px;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
-.game {
-    background: #111;
-    border: 1px solid #333;
-    padding: 15px;
-    margin: 20px auto;
-    width: 90%;
-    max-width: 500px;
-    border-radius: 10px;
+.jogo h3 {
+  margin: 10px 0 5px 0;
 }
 
-.game img {
-    width: 110px;
-    border-radius: 10px;
-    margin-bottom: 10px;
+.jogo p {
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
-.game h3 {
-    margin: 10px 0 5px 0;
-}
-
-.game p {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.download {
-    display: block;
-    color: red;
-    font-weight: bold;
-    text-decoration: none;
-    margin: 4px 0;
+.links-download a {
+  display: block;
+  color: red;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 4px 0;
 }
 </style>
-
-<script>
-function buscar() {
-    var input = document.getElementById("search").value.toLowerCase();
-    var jogos = document.getElementsByClassName("game");
-
-    for (var i = 0; i < jogos.length; i++) {
-        var nome = jogos[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
-        jogos[i].style.display = nome.indexOf(input) > -1 ? "block" : "none";
-    }
-}
-</script>
 
 </head>
 <body>
 
 <h1>Runi Store BR</h1>
 
-<div id="menu">
-    <a href="#ps3">PS3</a>
-    <a href="#ps2">PS2</a>
-    <a href="#ps1">PS1</a>
-</div>
-
-<input type="text" id="search" onkeyup="buscar()" placeholder="Pesquisar jogo...">
-
 <!-- ================= PS3 ================= -->
 
-<h2 id="ps3">Jogos de PS3</h2>
+<h2>Jogos de PS3</h2>
 
-<div class="game">
-    <img src="capas/ac1.jpg" alt="Assassin's Creed">
-    <h3>Assassin's Creed</h3>
-    <p>Ação e furtividade ambientadas na Terceira Cruzada.</p>
-    <a class="download" href="https://www.mediafire.com/folder/6htut02ab3yhe/Assassin's+Creed+[NPEB00393]-[Gutamps+Official]">Download</a>
+<div class="jogo">
+  <img src="capas/ac1.jpg" alt="Assassin's Creed">
+  <h3>Assassin's Creed</h3>
+  <p>Ação e furtividade ambientadas na Terceira Cruzada.</p>
+  <div class="links-download">
+    <a href="https://www.mediafire.com/folder/6htut02ab3yhe/Assassin's+Creed+[NPEB00393]-[Gutamps+Official]">📥 Baixar PKG</a>
+  </div>
 </div>
 
-<div class="game">
-    <img src="capas/ac2.jpg" alt="Assassin's Creed II">
-    <h3>Assassin's Creed II</h3>
-    <p>Continuação da história de Ezio Auditore na Itália renascentista.</p>
-    <a class="download" href="https://www.mediafire.com/file/chcdanonnd4qybk/1+-+Espacy+AC+II.pkg/file">Parte 1</a>
-    <a class="download" href="https://www.mediafire.com/file/v13lfigkcsxcedr/2+-+Espacy+AC+II.pkg/file">Parte 2</a>
+<div class="jogo">
+  <img src="capas/ac2.jpg" alt="Assassin's Creed II">
+  <h3>Assassin's Creed II</h3>
+  <p>Continuação da história de Ezio Auditore na Itália renascentista.</p>
+  <div class="links-download">
+    <a href="https://www.mediafire.com/file/chcdanonnd4qybk/1+-+Espacy+AC+II.pkg/file">📥 Parte 1</a>
+    <a href="https://www.mediafire.com/file/v13lfigkcsxcedr/2+-+Espacy+AC+II.pkg/file">📥 Parte 2</a>
+  </div>
 </div>
 
-<div class="game">
-    <img src="capas/ac_brotherhood.jpg" alt="Assassin's Creed Brotherhood">
-    <h3>Assassin's Creed: Brotherhood</h3>
-    <p>Expansão direta de AC II, ambientada em Roma.</p>
-    <a class="download" href="https://www.mediafire.com/file/9hoiltx266ssa7m/1+-+Espacy+-+AC+Brotherhood.pkg/file">Parte 1</a>
-    <a class="download" href="https://www.mediafire.com/file/fkayvx353xkjpow/2+-+Espacy+-+AC+Brotherhood.pkg/file">Parte 2</a>
+<div class="jogo">
+  <img src="capas/ac_brotherhood.jpg" alt="Assassin's Creed Brotherhood">
+  <h3>Assassin's Creed: Brotherhood</h3>
+  <p>Expansão direta de AC II, ambientada em Roma.</p>
+  <div class="links-download">
+    <a href="https://www.mediafire.com/file/9hoiltx266ssa7m/1+-+Espacy+-+AC+Brotherhood.pkg/file">📥 Parte 1</a>
+    <a href="https://www.mediafire.com/file/fkayvx353xkjpow/2+-+Espacy+-+AC+Brotherhood.pkg/file">📥 Parte 2</a>
+  </div>
 </div>
 
-<div class="game">
-    <img src="capas/ac_revelations.jpg" alt="Assassin's Creed Revelations">
-    <h3>Assassin's Creed: Revelations</h3>
-    <p>Conclusão da trilogia Ezio, conectando sua história à de Altair.</p>
-    <a class="download" href="https://www.mediafire.com/file/ci3t7iebmmh2xzy/1+-+Espacy+-+AC+Revelations.pkg/file">Parte 1</a>
-    <a class="download" href="https://www.mediafire.com/file/biyx0i8dxvggume/2+-+Espacy+-+AC+Revelations.pkg/file">Parte 2</a>
+<div class="jogo">
+  <img src="capas/ac_revelations.jpg" alt="Assassin's Creed Revelations">
+  <h3>Assassin's Creed: Revelations</h3>
+  <p>Conclusão da trilogia Ezio, conectando sua história à de Altair.</p>
+  <div class="links-download">
+    <a href="https://www.mediafire.com/file/ci3t7iebmmh2xzy/1+-+Espacy+-+AC+Revelations.pkg/file">📥 Parte 1</a>
+    <a href="https://www.mediafire.com/file/biyx0i8dxvggume/2+-+Espacy+-+AC+Revelations.pkg/file">📥 Parte 2</a>
+  </div>
 </div>
 
-<div class="game">
-    <img src="capas/ac3.jpg" alt="Assassin's Creed III">
-    <h3>Assassin's Creed III</h3>
-    <p>Ambientado na Revolução Americana, com dublagem em português.</p>
-    <a class="download" href="https://www.mediafire.com/file/70jmen6gl8nc6h3/Assassin%252527s__Creed__III_dublado.pkg/file">Dublagem PT-BR</a>
-    <a class="download" href="https://youtu.be/-oRQmMtX0LQ">Tutorial</a>
+<div class="jogo">
+  <img src="capas/ac3.jpg" alt="Assassin's Creed III">
+  <h3>Assassin's Creed III (PT-BR)</h3>
+  <p>Ambientado na Revolução Americana, com suporte à dublagem em português.</p>
+  <div class="links-download">
+    <a href="https://www.mediafire.com/file/70jmen6gl8nc6h3/Assassin%252527s__Creed__III_dublado.pkg/file">📥 Dublagem PT-BR</a>
+  </div>
 </div>
 
-<div class="game">
-    <img src="capas/ac4.jpg" alt="Assassin's Creed IV Black Flag">
-    <h3>Assassin's Creed IV: Black Flag</h3>
-    <p>Aventura pirata em mundo aberto com batalhas navais.</p>
-    <a class="download" href="https://www.mediafire.com/folder/8b6luzgl0fjcf/BFl4ggAC">Download</a>
+<div class="jogo">
+  <img src="capas/ac4.jpg" alt="Assassin's Creed IV Black Flag">
+  <h3>Assassin's Creed IV: Black Flag</h3>
+  <p>Aventura pirata em mundo aberto com batalhas navais.</p>
+  <div class="links-download">
+    <a href="https://www.mediafire.com/folder/8b6luzgl0fjcf/BFl4ggAC">📥 Baixar PKG</a>
+  </div>
 </div>
 
-<div class="game">
-    <img src="capas/ac_rogue.jpg" alt="Assassin's Creed Rogue">
-    <h3>Assassin's Creed Rogue</h3>
-    <p>Mostra o outro lado da guerra entre Assassinos e Templários.</p>
-    <a class="download" href="https://www.mediafire.com/file/nnv77l8fp2f4ppm/Assassins_Creed_Rogue_01.pkg/file">Parte 1</a>
-    <a class="download" href="https://www.mediafire.com/file/pq5slsugyrba1s0/Assassins_Creed_Rogue_02.pkg/file">Parte 2</a>
-    <a class="download" href="https://www.mediafire.com/file/cphcbca1esz97lk/Assassins_Creed_Rogue_03.pkg/file">Parte 3</a>
+<div class="jogo">
+  <img src="capas/ac_rogue.jpg" alt="Assassin's Creed Rogue">
+  <h3>Assassin's Creed Rogue</h3>
+  <p>Você joga como um Templário, vendo o outro lado do conflito.</p>
+  <div class="links-download">
+    <a href="https://www.mediafire.com/file/nnv77l8fp2f4ppm/Assassins_Creed_Rogue_01.pkg/file">📥 Parte 1</a>
+    <a href="https://www.mediafire.com/file/pq5slsugyrba1s0/Assassins_Creed_Rogue_02.pkg/file">📥 Parte 2</a>
+    <a href="https://www.mediafire.com/file/cphcbca1esz97lk/Assassins_Creed_Rogue_03.pkg/file">📥 Parte 3</a>
+  </div>
 </div>
 
-<div class="game">
-    <img src="capas/ac_liberation.jpg" alt="Assassin's Creed Liberation HD">
-    <h3>Assassin's Creed Liberation HD</h3>
-    <p>Versão em alta definição do jogo originalmente lançado para PS Vita.</p>
-    <a class="download" href="https://www.mediafire.com/file/ic0mis69s8ntht0/Assassin%2527s_Creed_Liberation_HD_%255BNPUB31244%255D-%255BGO%255D.pkg/file">Download</a>
+<div class="jogo">
+  <img src="capas/ac_liberation.jpg" alt="Assassin's Creed Liberation HD">
+  <h3>Assassin's Creed Liberation HD</h3>
+  <p>Versão em alta definição do jogo originalmente lançado para PS Vita.</p>
+  <div class="links-download">
+    <a href="https://www.mediafire.com/file/ic0mis69s8ntht0/Assassin%2527s_Creed_Liberation_HD_%255BNPUB31244%255D-%255BGO%255D.pkg/file">📥 Baixar PKG</a>
+  </div>
 </div>
 
-<div class="game">
-    <img src="capas/alice.jpg" alt="Alice Madness Returns">
-    <h3>Alice: Madness Returns</h3>
-    <p>Ação e plataforma com atmosfera sombria e psicológica.</p>
-    <a class="download" href="https://www.mediafire.com/file/nem4kgwamvqwv0m/Pedrost+-+Alice+Madness+Returns+01.pkg/file">Parte 1</a>
-    <a class="download" href="https://www.mediafire.com/file/4npnx9120q15iw5/Pedrost+-+Alice+Madness+Returns+02.pkg/file">Parte 2</a>
+<div class="jogo">
+  <img src="capas/alice.jpg" alt="Alice Madness Returns">
+  <h3>Alice: Madness Returns</h3>
+  <p>Ação e plataforma com atmosfera sombria e psicológica.</p>
+  <div class="links-download">
+    <a href="https://www.mediafire.com/file/nem4kgwamvqwv0m/Pedrost+-+Alice+Madness+Returns+01.pkg/file">📥 Parte 1</a>
+    <a href="https://www.mediafire.com/file/4npnx9120q15iw5/Pedrost+-+Alice+Madness+Returns+02.pkg/file">📥 Parte 2</a>
+  </div>
 </div>
 
-<div class="game">
-    <img src="capas/asura.jpg" alt="Asura's Wrath">
-    <h3>Asura's Wrath</h3>
-    <p>Ação cinematográfica intensa com narrativa estilo anime.</p>
-    <a class="download" href="https://www.mediafire.com/file/lw2x9ddrkfb4luv/Pedrost_Asura_Wrath_01.pkg/file">Parte 1</a>
-    <a class="download" href="https://www.mediafire.com/file/fx6jtu0dpgx8ynl/Pedrost_Asura_Wrath_02.pkg/file">Parte 2</a>
-    <a class="download" href="https://www.mediafire.com/file/fza5dx3edhogcjl/Pedrost_Asura_Wrath_03.pkg/file">Parte 3</a>
+<div class="jogo">
+  <img src="capas/asura.jpg" alt="Asura's Wrath">
+  <h3>Asura's Wrath</h3>
+  <p>Ação cinematográfica intensa com narrativa inspirada em anime.</p>
+  <div class="links-download">
+    <a href="https://www.mediafire.com/file/lw2x9ddrkfb4luv/Pedrost_Asura_Wrath_01.pkg/file">📥 Parte 1</a>
+    <a href="https://www.mediafire.com/file/fx6jtu0dpgx8ynl/Pedrost_Asura_Wrath_02.pkg/file">📥 Parte 2</a>
+    <a href="https://www.mediafire.com/file/fza5dx3edhogcjl/Pedrost_Asura_Wrath_03.pkg/file">📥 Parte 3</a>
+  </div>
 </div>
 
-<div class="game">
-    <img src="capas/army_of_two.jpg" alt="Army of Two The Devil's Cartel">
-    <h3>Army of Two: The Devil's Cartel</h3>
-    <p>Tiro cooperativo em terceira pessoa focado em trabalho em equipe.</p>
+<div class="jogo">
+  <img src="capas/army_of_two.jpg" alt="Army of Two The Devil's Cartel">
+  <h3>Army of Two: The Devil's Cartel</h3>
+  <p>Tiro cooperativo em terceira pessoa focado em trabalho em equipe.</p>
+  <div class="links-download">
+    <a href="#">📥 Links em breve</a>
+  </div>
 </div>
 
-<div class="game">
-    <img src="capas/alien_isolation.jpg" alt="Alien Isolation">
-    <h3>Alien: Isolation</h3>
-    <p>Terror de sobrevivência intenso no universo Alien.</p>
+<div class="jogo">
+  <img src="capas/alien_isolation.jpg" alt="Alien Isolation">
+  <h3>Alien: Isolation</h3>
+  <p>Terror de sobrevivência intenso no universo Alien.</p>
+  <div class="links-download">
+    <a href="https://www.mediafire.com/file/x7xtn1fp0nffx38/Pedrost_Alien_Isolation_01.pkg/file">📥 Parte 1</a>
+    <a href="https://www.mediafire.com/file/c61dv36cxhly3hc/Pedrost_Alien_Isolation_02.pkg/file">📥 Parte 2</a>
+    <a href="https://www.mediafire.com/file/01r0ce8qplzdnon/Pedrost_Alien_Isolation_03.pkg/file">📥 Parte 3</a>
+    <a href="https://www.mediafire.com/file/v49yghpx0b9kczs/Pedrost_Alien_Isolation_04.pkg/file">📥 Parte 4</a>
+    <a href="https://www.mediafire.com/file/a7m1dku2t8xr8bd/Pedrost_Alien_Isolation_05.pkg/file">📥 Parte 5</a>
+  </div>
 </div>
-
-<h2 id="ps2">Jogos de PS2</h2>
-<p>Em breve...</p>
-
-<h2 id="ps1">Jogos de PS1</h2>
-<p>Em breve...</p>
-
-</body>
-</html>    <p>Primeiro jogo da franquia.</p>
-    <div class="links">
-        <a class="part1" href="https://www.mediafire.com/folder/6htut02ab3yhe/Assassin's+Creed+[NPEB00393]-[Gutamps+Official]">PKG Completo</a>
-    </div>
-</div>
-
-<div class="game">
-    <img src="capas/ac2.jpg">
-    <h3>Assassin’s Creed II</h3>
-    <p>Continuação da história de Ezio.</p>
-    <div class="links">
-        <a class="part1" href="https://www.mediafire.com/file/chcdanonnd4qybk/1+-+Espacy+AC+II.pkg/file">Parte 1</a>
-        <a class="part2" href="https://www.mediafire.com/file/v13lfigkcsxcedr/2+-+Espacy+AC+II.pkg/file">Parte 2</a>
-    </div>
-</div>
-
-<div class="game">
-    <img src="capas/ac_brotherhood.jpg">
-    <h3>Assassin’s Creed: Brotherhood</h3>
-    <p>Expansão direta de AC II.</p>
-    <div class="links">
-        <a class="part1" href="https://www.mediafire.com/file/9hoiltx266ssa7m/1+-+Espacy+-+AC+Brotherhood.pkg/file">Parte 1</a>
-        <a class="part2" href="https://www.mediafire.com/file/fkayvx353xkjpow/2+-+Espacy+-+AC+Brotherhood.pkg/file">Parte 2</a>
-    </div>
-</div>
-
-<div class="game">
-    <img src="capas/ac_revelations.jpg">
-    <h3>Assassin’s Creed: Revelations</h3>
-    <p>Final da trilogia Ezio.</p>
-    <div class="links">
-        <a class="part1" href="https://www.mediafire.com/file/ci3t7iebmmh2xzy/1+-+Espacy+-+AC+Revelations.pkg/file">Parte 1</a>
-        <a class="part2" href="https://www.mediafire.com/file/biyx0i8dxvggume/2+-+Espacy+-+AC+Revelations.pkg/file">Parte 2</a>
-    </div>
-</div>
-
-<div class="game">
-    <img src="capas/ac3.jpg">
-    <h3>Assassin’s Creed III</h3>
-    <p>Versão USA + dublagem PT-BR.</p>
-    <div class="links">
-        <a class="part1" href="https://www.mediafire.com/file/70jmen6gl8nc6h3/Assassin%252527s__Creed__III_dublado.pkg/file">Dublagem</a>
-        <a class="part2" href="https://youtu.be/-oRQmMtX0LQ">Tutorial</a>
-    </div>
-</div>
-
-<div class="game">
-    <img src="capas/ac4.jpg">
-    <h3>Assassin’s Creed IV: Black Flag</h3>
-    <p>Jogo base + DLCs.</p>
-    <div class="links">
-        <a class="part1" href="https://www.mediafire.com/folder/8b6luzgl0fjcf/BFl4ggAC">PKG</a>
-        <a class="part2" href="https://youtu.be/UXv-1hr1Wbg">USB</a>
-        <a class="part3" href="https://youtu.be/ca2AENmsQKY">FTP</a>
-    </div>
-</div>
-
-<div class="game">
-    <img src="capas/ac_rogue.jpg">
-    <h3>Assassin’s Creed Rogue</h3>
-    <p>Capítulo final do PS3.</p>
-    <div class="links">
-        <a class="part1" href="https://www.mediafire.com/file/nnv77l8fp2f4ppm/Assassins_Creed_Rogue_01.pkg/file">Parte 1</a>
-        <a class="part2" href="https://www.mediafire.com/file/pq5slsugyrba1s0/Assassins_Creed_Rogue_02.pkg/file">Parte 2</a>
-        <a class="part3" href="https://www.mediafire.com/file/cphcbca1esz97lk/Assassins_Creed_Rogue_03.pkg/file">Parte 3</a>
-    </div>
-</div>
-
-<div class="game">
-    <img src="capas/ac_liberation.jpg">
-    <h3>Assassin’s Creed Liberation HD</h3>
-    <p>Versão HD do PS Vita.</p>
-    <div class="links">
-        <a class="part1" href="https://www.mediafire.com/file/ic0mis69s8ntht0/Assassin%2527s_Creed_Liberation_HD_%255BNPUB31244%255D-%255BGO%255D.pkg/file">PKG Completo</a>
-    </div>
-</div>
-
-<!-- ================= PS2 / PS1 ================= -->
-
-<h2 id="ps2">Jogos de PS2</h2>
-<p>Em breve...</p>
-
-<h2 id="ps1">Jogos de PS1</h2>
-<p>Em breve...</p>
 
 </body>
 </html>
